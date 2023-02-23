@@ -33,8 +33,7 @@ namespace FitnessTrackingTools
             {
                 p.Location = new Point(x + 290, y);
                 p.Tag = "open";
-                picToolCover.Visible = true;
-                picToolCover.Enabled = true;
+                picToolCover.Location = (new Point(1, 101));
 
                 if (p.Name == picTimer.Name) timerShow();
                 else if (p.Name == picStopwatch.Name) stopwatchShow();
@@ -45,8 +44,7 @@ namespace FitnessTrackingTools
             {
                 p.Location = new Point(x - 290, y);
                 p.Tag = "closed";
-                picToolCover.Visible = false;
-                picToolCover.Enabled = false;
+                picToolCover.Location = (new Point(628, 69));
 
                 if (p.Name == picTimer.Name) timerHide();
                 else if (p.Name == picStopwatch.Name) stopwatchHide();
@@ -103,8 +101,9 @@ namespace FitnessTrackingTools
 
         private void btnLogOut_Click(object sender, EventArgs e)
         {
-            
+            user = new User("null user", 180, 75, new DateTime(1980, 1, 1), "Default");
         }
+
         private void picFitnessImage_Click(object sender, EventArgs e)
         {
             if (user.Name == "null user")
@@ -249,36 +248,36 @@ namespace FitnessTrackingTools
 
         private void timerHide()
         {
-            lblTimerName.Visible = false;
+            lblTimerName.Location = (new Point(461, 12));
 
-            lblTimerHoursDisplay.Visible = false;
-            lblTimerMinutesDisplay.Visible = false;
-            lblTimerSecondsDisplay.Visible = false;
+            lblTimerHoursDisplay.Location = (new Point(430, 197));
+            lblTimerMinutesDisplay.Location = (new Point(483, 197));
+            lblTimerSecondsDisplay.Location = (new Point(536, 197));
 
-            txtTimerHours.Visible = false;
-            txtTimerMinutes.Visible = false;
-            txtTimerSeconds.Visible = false;
+            txtTimerHours.Location = (new Point(431, 59));
+            txtTimerMinutes.Location = (new Point(484, 60));
+            txtTimerSeconds.Location = (new Point(537, 60));
 
-            btnTimerStart.Visible = false;
-            btnTimerStop.Visible = false;
-            btnTimerReset.Visible = false;
+            btnTimerStart.Location = (new Point(398, 122));
+            btnTimerStop.Location = (new Point(477, 122));
+            btnTimerReset.Location = (new Point(551, 122));
         }
 
         private void timerShow()
         {
-            lblTimerName.Visible = true;
+            lblTimerName.Location = (new Point(77, 115));
 
-            lblTimerHoursDisplay.Visible = true;
-            lblTimerMinutesDisplay.Visible = true;
-            lblTimerSecondsDisplay.Visible = true;
+            lblTimerHoursDisplay.Location = (new Point(46, 300));
+            lblTimerMinutesDisplay.Location = (new Point(99, 300));
+            lblTimerSecondsDisplay.Location = (new Point(152, 300));
 
-            txtTimerHours.Visible = true;
-            txtTimerMinutes.Visible = true;
-            txtTimerSeconds.Visible = true;
+            txtTimerHours.Location = (new Point(47, 163));
+            txtTimerMinutes.Location = (new Point(100, 163));
+            txtTimerSeconds.Location = (new Point(153, 163));
 
-            btnTimerStart.Visible = true;
-            btnTimerStop.Visible = true;
-            btnTimerReset.Visible = true;
+            btnTimerStart.Location = (new Point(14, 225));
+            btnTimerStop.Location = (new Point(93, 225));
+            btnTimerReset.Location = (new Point(167, 225));
         }
 
         #endregion TimerControl

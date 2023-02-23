@@ -280,63 +280,58 @@
             // picToolCover
             // 
             this.picToolCover.Enabled = false;
-            this.picToolCover.Location = new System.Drawing.Point(1, 101);
+            this.picToolCover.Location = new System.Drawing.Point(628, 69);
             this.picToolCover.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.picToolCover.Name = "picToolCover";
             this.picToolCover.Size = new System.Drawing.Size(291, 415);
             this.picToolCover.TabIndex = 18;
             this.picToolCover.TabStop = false;
-            this.picToolCover.Visible = false;
             // 
             // txtTimerHours
             // 
             this.txtTimerHours.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtTimerHours.Location = new System.Drawing.Point(431, 59);
+            this.txtTimerHours.Location = new System.Drawing.Point(436, 72);
             this.txtTimerHours.MaxLength = 2;
             this.txtTimerHours.Name = "txtTimerHours";
             this.txtTimerHours.Size = new System.Drawing.Size(47, 47);
             this.txtTimerHours.TabIndex = 19;
             this.txtTimerHours.Text = "00";
             this.txtTimerHours.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtTimerHours.Visible = false;
             // 
             // txtTimerSeconds
             // 
             this.txtTimerSeconds.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtTimerSeconds.Location = new System.Drawing.Point(537, 60);
+            this.txtTimerSeconds.Location = new System.Drawing.Point(542, 73);
             this.txtTimerSeconds.MaxLength = 2;
             this.txtTimerSeconds.Name = "txtTimerSeconds";
             this.txtTimerSeconds.Size = new System.Drawing.Size(47, 47);
             this.txtTimerSeconds.TabIndex = 20;
             this.txtTimerSeconds.Text = "00";
             this.txtTimerSeconds.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtTimerSeconds.Visible = false;
             // 
             // txtTimerMinutes
             // 
             this.txtTimerMinutes.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtTimerMinutes.Location = new System.Drawing.Point(484, 60);
+            this.txtTimerMinutes.Location = new System.Drawing.Point(489, 73);
             this.txtTimerMinutes.MaxLength = 2;
             this.txtTimerMinutes.Name = "txtTimerMinutes";
             this.txtTimerMinutes.Size = new System.Drawing.Size(47, 47);
             this.txtTimerMinutes.TabIndex = 21;
             this.txtTimerMinutes.Text = "00";
             this.txtTimerMinutes.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtTimerMinutes.Visible = false;
             // 
             // btnTimerStart
             // 
             this.btnTimerStart.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnTimerStart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnTimerStart.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnTimerStart.Location = new System.Drawing.Point(393, 126);
+            this.btnTimerStart.Location = new System.Drawing.Point(403, 135);
             this.btnTimerStart.Name = "btnTimerStart";
             this.btnTimerStart.Size = new System.Drawing.Size(59, 65);
             this.btnTimerStart.TabIndex = 22;
             this.btnTimerStart.Text = "Start";
             this.btnTimerStart.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTimerStart.UseVisualStyleBackColor = false;
-            this.btnTimerStart.Visible = false;
             this.btnTimerStart.Click += new System.EventHandler(this.btnTimerStart_Click);
             // 
             // btnTimerStop
@@ -344,14 +339,13 @@
             this.btnTimerStop.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnTimerStop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnTimerStop.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnTimerStop.Location = new System.Drawing.Point(472, 126);
+            this.btnTimerStop.Location = new System.Drawing.Point(482, 135);
             this.btnTimerStop.Name = "btnTimerStop";
             this.btnTimerStop.Size = new System.Drawing.Size(59, 65);
             this.btnTimerStop.TabIndex = 23;
             this.btnTimerStop.Text = "Stop";
             this.btnTimerStop.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTimerStop.UseVisualStyleBackColor = false;
-            this.btnTimerStop.Visible = false;
             this.btnTimerStop.Click += new System.EventHandler(this.btnTimerStop_Click);
             // 
             // btnTimerReset
@@ -359,59 +353,54 @@
             this.btnTimerReset.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnTimerReset.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnTimerReset.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnTimerReset.Location = new System.Drawing.Point(546, 126);
+            this.btnTimerReset.Location = new System.Drawing.Point(556, 135);
             this.btnTimerReset.Name = "btnTimerReset";
             this.btnTimerReset.Size = new System.Drawing.Size(59, 65);
             this.btnTimerReset.TabIndex = 24;
             this.btnTimerReset.Text = "Reset";
             this.btnTimerReset.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTimerReset.UseVisualStyleBackColor = false;
-            this.btnTimerReset.Visible = false;
             this.btnTimerReset.Click += new System.EventHandler(this.btnTimerReset_Click);
             // 
             // lblTimerHoursDisplay
             // 
             this.lblTimerHoursDisplay.AutoSize = true;
             this.lblTimerHoursDisplay.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblTimerHoursDisplay.Location = new System.Drawing.Point(428, 210);
+            this.lblTimerHoursDisplay.Location = new System.Drawing.Point(435, 210);
             this.lblTimerHoursDisplay.Name = "lblTimerHoursDisplay";
             this.lblTimerHoursDisplay.Size = new System.Drawing.Size(50, 41);
             this.lblTimerHoursDisplay.TabIndex = 25;
             this.lblTimerHoursDisplay.Text = "00";
-            this.lblTimerHoursDisplay.Visible = false;
             // 
             // lblTimerMinutesDisplay
             // 
             this.lblTimerMinutesDisplay.AutoSize = true;
             this.lblTimerMinutesDisplay.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblTimerMinutesDisplay.Location = new System.Drawing.Point(481, 210);
+            this.lblTimerMinutesDisplay.Location = new System.Drawing.Point(488, 210);
             this.lblTimerMinutesDisplay.Name = "lblTimerMinutesDisplay";
             this.lblTimerMinutesDisplay.Size = new System.Drawing.Size(50, 41);
             this.lblTimerMinutesDisplay.TabIndex = 26;
             this.lblTimerMinutesDisplay.Text = "00";
-            this.lblTimerMinutesDisplay.Visible = false;
             // 
             // lblTimerSecondsDisplay
             // 
             this.lblTimerSecondsDisplay.AutoSize = true;
             this.lblTimerSecondsDisplay.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblTimerSecondsDisplay.Location = new System.Drawing.Point(534, 210);
+            this.lblTimerSecondsDisplay.Location = new System.Drawing.Point(541, 210);
             this.lblTimerSecondsDisplay.Name = "lblTimerSecondsDisplay";
             this.lblTimerSecondsDisplay.Size = new System.Drawing.Size(50, 41);
             this.lblTimerSecondsDisplay.TabIndex = 27;
             this.lblTimerSecondsDisplay.Text = "00";
-            this.lblTimerSecondsDisplay.Visible = false;
             // 
             // lblTimerName
             // 
             this.lblTimerName.AutoSize = true;
             this.lblTimerName.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblTimerName.Location = new System.Drawing.Point(461, 5);
+            this.lblTimerName.Location = new System.Drawing.Point(466, 25);
             this.lblTimerName.Name = "lblTimerName";
             this.lblTimerName.Size = new System.Drawing.Size(93, 41);
             this.lblTimerName.TabIndex = 28;
             this.lblTimerName.Text = "Timer";
-            this.lblTimerName.Visible = false;
             // 
             // lblStopwatchName
             // 
@@ -883,7 +872,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1174, 527);
+            this.ClientSize = new System.Drawing.Size(1218, 527);
             this.Controls.Add(this.btnUnitConverterDistance);
             this.Controls.Add(this.btnUnitConverterWeight);
             this.Controls.Add(this.lblUnitConverterDistanceName);
