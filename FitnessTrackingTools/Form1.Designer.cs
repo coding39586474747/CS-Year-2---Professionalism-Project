@@ -1,6 +1,6 @@
 ﻿namespace FitnessTrackingTools
 {
-    partial class lblUnitConverterName
+    partial class Form1
     {
         /// <summary>
         ///  Required designer variable.
@@ -80,7 +80,7 @@
             this.btnIntervalReset = new System.Windows.Forms.Button();
             this.btnIntervalStop = new System.Windows.Forms.Button();
             this.btnIntervalStart = new System.Windows.Forms.Button();
-            this.lblUCName = new System.Windows.Forms.Label();
+            this.lblUnitConverterName = new System.Windows.Forms.Label();
             this.txtUnitConverterWeightInput = new System.Windows.Forms.TextBox();
             this.txtUnitConverterWeightOutput = new System.Windows.Forms.TextBox();
             this.txtUnitConverterDistanceOutput = new System.Windows.Forms.TextBox();
@@ -178,6 +178,7 @@
             this.txtWeeklyMessage.Location = new System.Drawing.Point(97, 77);
             this.txtWeeklyMessage.Multiline = true;
             this.txtWeeklyMessage.Name = "txtWeeklyMessage";
+            this.txtWeeklyMessage.ReadOnly = true;
             this.txtWeeklyMessage.Size = new System.Drawing.Size(263, 143);
             this.txtWeeklyMessage.TabIndex = 9;
             this.txtWeeklyMessage.Text = "Hello Username,\r\n\r\nIn the last week, you\'ve *Insert random activity and count*";
@@ -226,6 +227,7 @@
             this.picFitnessImage.Size = new System.Drawing.Size(263, 168);
             this.picFitnessImage.TabIndex = 13;
             this.picFitnessImage.TabStop = false;
+            this.picFitnessImage.Click += new System.EventHandler(this.picFitnessImage_Click);
             // 
             // picTimer
             // 
@@ -726,16 +728,16 @@
             this.btnIntervalStart.Visible = false;
             this.btnIntervalStart.Click += new System.EventHandler(this.btnIntervalStart_Click);
             // 
-            // lblUCName
+            // lblUnitConverterName
             // 
-            this.lblUCName.AutoSize = true;
-            this.lblUCName.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblUCName.Location = new System.Drawing.Point(885, 296);
-            this.lblUCName.Name = "lblUCName";
-            this.lblUCName.Size = new System.Drawing.Size(211, 41);
-            this.lblUCName.TabIndex = 60;
-            this.lblUCName.Text = "Unit Converter";
-            this.lblUCName.Visible = false;
+            this.lblUnitConverterName.AutoSize = true;
+            this.lblUnitConverterName.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblUnitConverterName.Location = new System.Drawing.Point(885, 296);
+            this.lblUnitConverterName.Name = "lblUnitConverterName";
+            this.lblUnitConverterName.Size = new System.Drawing.Size(211, 41);
+            this.lblUnitConverterName.TabIndex = 60;
+            this.lblUnitConverterName.Text = "Unit Converter";
+            this.lblUnitConverterName.Visible = false;
             // 
             // txtUnitConverterWeightInput
             // 
@@ -877,7 +879,7 @@
             this.btnUnitConverterDistance.Visible = false;
             this.btnUnitConverterDistance.Click += new System.EventHandler(this.btnUnitConverterDistance_Click);
             // 
-            // lblUnitConverterName
+            // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -894,7 +896,7 @@
             this.Controls.Add(this.txtUnitConverterDistanceInput);
             this.Controls.Add(this.txtUnitConverterWeightOutput);
             this.Controls.Add(this.txtUnitConverterWeightInput);
-            this.Controls.Add(this.lblUCName);
+            this.Controls.Add(this.lblUnitConverterName);
             this.Controls.Add(this.btnIntervalReset);
             this.Controls.Add(this.btnIntervalStop);
             this.Controls.Add(this.btnIntervalStart);
@@ -947,7 +949,7 @@
             this.Controls.Add(this.btnUsers);
             this.Controls.Add(this.btnPlus);
             this.Controls.Add(this.btnAchievement);
-            this.Name = "lblUnitConverterName";
+            this.Name = "Form1";
             this.Text = "Fitness Tracker";
             this.Load += new System.EventHandler(this.lblUnitConverterName_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picClientLogo)).EndInit();
@@ -1016,7 +1018,7 @@
         private Button btnIntervalReset;
         private Button btnIntervalStop;
         private Button btnIntervalStart;
-        private Label lblUCName;
+        private Label lblUnitConverterName;
         private TextBox txtUnitConverterWeightInput;
         private TextBox txtUnitConverterWeightOutput;
         private TextBox txtUnitConverterDistanceOutput;

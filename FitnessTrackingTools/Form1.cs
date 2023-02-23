@@ -4,8 +4,10 @@ using System.Threading;
 
 namespace FitnessTrackingTools
 {
-    public partial class lblUnitConverterName : Form
+    public partial class Form1 : Form
     {
+        User user = new User("null user", 180, 75, new DateTime(1980, 1, 1), "Default");
+
         Thread? timerThread = null;
         public delegate void timerCountdownDelegate();
 
@@ -15,7 +17,7 @@ namespace FitnessTrackingTools
         Thread? intervalThread = null;
         public delegate void intervalDelegate();
 
-        public lblUnitConverterName()
+        public Form1()
         {
             InitializeComponent();
         }
@@ -94,14 +96,30 @@ namespace FitnessTrackingTools
             // If no instance of UserManagementForm is open, create a new one
             if (!isFormOpen)
             {
-                UserManagementForm userManagementForm = new UserManagementForm();
+                UserManagementForm userManagementForm = new UserManagementForm(this, user);
                 userManagementForm.Show();
             }        
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)
         {
+            
+        }
+        private void picFitnessImage_Click(object sender, EventArgs e)
+        {
+            if (user.Name == "null user")
+            {
+                return;
+            }
+            else
+            {
+                txtWeeklyMessage.Text = user.Name;
+            }
+        }
 
+        public void updateUser(User u)
+        {
+            user = u;
         }
 
         #region TimerControl
@@ -668,7 +686,7 @@ namespace FitnessTrackingTools
 
         private void unitConverterShow()
         {
-            lblUCName.Visible = true;
+            lblUnitConverterName.Visible = true;
             lblUnitConverterDistanceName.Visible = true;
             lblUnitConverterWeightName.Visible = true;
 
@@ -690,7 +708,7 @@ namespace FitnessTrackingTools
 
         private void unitConverterHide()
         {
-            lblUCName.Visible = false;
+            lblUnitConverterName.Visible = false;
             lblUnitConverterDistanceName.Visible = false;
             lblUnitConverterWeightName.Visible = false;
 
