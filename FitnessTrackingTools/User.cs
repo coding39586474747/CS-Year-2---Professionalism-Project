@@ -18,11 +18,17 @@ namespace FitnessTrackingTools
         // Constructor
         public User(string name, double height, double weight, DateTime dateOfBirth, string password)
         {
-            Name = name;
-            Height = height;
-            Weight = weight;
-            DateOfBirth = dateOfBirth;
-            Password = password;
+            this.Name = name;
+            this.Height = height;
+            this.Weight = weight;
+            this.DateOfBirth = dateOfBirth;
+            this.Password = password;
+        }
+
+        // Password setter
+        public void SetPassword(string password)
+        {
+            this.Password = password;
         }
 
         // Public method to check if a provided password matches the user's password
@@ -31,12 +37,17 @@ namespace FitnessTrackingTools
             return password == Password;
         }
 
+        private string GetPassword()
+        {
+            return Password;
+        }
+
 
         public void WriteUserToCsv(User user)
         {
             // Construct the file path using the user's name
             string fileName = $"{user.Name}.csv";
-            string filePath = Path.Combine("path/to/directory", fileName);
+            string filePath = Path.Combine("C:\\Users\\taful\\source\\repos\\CS-Year-2---Professionalism-Project\\FitnessTrackingTools\\Users", fileName);
 
             // Create a new file if it doesn't exist, or overwrite the existing file
             using (StreamWriter sw = new StreamWriter(filePath, false))
@@ -47,7 +58,7 @@ namespace FitnessTrackingTools
                     user.Height,
                     user.Weight,
                     user.DateOfBirth.ToString("dd-MM-yyyy"),
-                    user.CheckPassword("password") ? "1" : "0"));
+                    user.GetPassword()));
             }
         }
 
@@ -64,8 +75,8 @@ namespace FitnessTrackingTools
                 fields[0],      // Name
                 double.Parse(fields[1]),    // Height
                 double.Parse(fields[2]),    // Weight
-                DateTime.ParseExact(fields[3], "dd-MM-yyyy", null),    // Date of birth
-                fields[4] == "1" ? "password" : "");    // Password (if available)
+                DateTime.ParseExact(fields[3], "dd-MM-yyyy", null), // Date of birth
+                fields[4]); // Password
 
             return user;
         }

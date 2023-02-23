@@ -6,6 +6,8 @@ namespace FitnessTrackingTools
 {
     public partial class lblUnitConverterName : Form
     {
+        User? user;
+
         Thread? timerThread = null;
         public delegate void timerCountdownDelegate();
 
@@ -94,7 +96,7 @@ namespace FitnessTrackingTools
             // If no instance of UserManagementForm is open, create a new one
             if (!isFormOpen)
             {
-                UserManagementForm userManagementForm = new UserManagementForm();
+                UserManagementForm userManagementForm = new UserManagementForm(user);
                 userManagementForm.Show();
             }        
         }
