@@ -62,23 +62,33 @@ namespace FitnessTrackingTools
             }
         }
 
-        public User ReadUserFromCsv(string filePath)
+        public User ReadUserFromCsv(string username, string password)
         {
-            // Read the contents of the CSV file
-            string[] lines = File.ReadAllLines(filePath);
+            String fileName = "C:\\Users\\taful\\source\\repos\\CS-Year-2---Professionalism-Project\\FitnessTrackingTools\\Users\\" + username + ".csv";
+            
+            // Create a StreamReader object to read from the CSV file
+            using (StreamReader reader = new StreamReader(fileName))
+            {
 
-            // Split the contents into fields
-            string[] fields = lines[0].Split(',');
 
-            // Create a new User object using the data from the CSV file
-            User user = new User(
-                fields[0],      // Name
-                double.Parse(fields[1]),    // Height
-                double.Parse(fields[2]),    // Weight
-                DateTime.ParseExact(fields[3], "dd-MM-yyyy", null), // Date of birth
-                fields[4]); // Password
+                // Loop through the lines of the CSV file
+                while (!reader.EndOfStream)
+                {
+                    // Read a line from the CSV file and split it into fields
+                    string[] fields = reader.ReadLine().Split(',');
 
-            return user;
+                    // Check if the username and password match
+                    if (fields[0] == username && fields[4] == password)
+                    {
+                        // Create a new User object using the data from the CSV file
+                        User user = new User(fields[0], double.Parse(fields[1]), double.Parse(fields[2]), DateTime.Parse(fields[3]), fields[4]);
+                        return user;
+                    }
+                }
+            }
+
+            // If no user was found, return null
+            return null;
         }
 
 

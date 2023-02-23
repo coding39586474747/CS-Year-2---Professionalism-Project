@@ -44,6 +44,10 @@
             this.lblPasswordConfirm = new System.Windows.Forms.Label();
             this.lblUserPassword = new System.Windows.Forms.Label();
             this.dateTimeDOB = new System.Windows.Forms.DateTimePicker();
+            this.txtUserLoginUsername = new System.Windows.Forms.TextBox();
+            this.lblUserUsername = new System.Windows.Forms.Label();
+            this.lblUserLoginPassword = new System.Windows.Forms.Label();
+            this.txtUserLoginPassword = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.picClientLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,22 +66,23 @@
             this.btnUserLogin.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnUserLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnUserLogin.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnUserLogin.Location = new System.Drawing.Point(305, 12);
+            this.btnUserLogin.Location = new System.Drawing.Point(314, 22);
             this.btnUserLogin.Name = "btnUserLogin";
-            this.btnUserLogin.Size = new System.Drawing.Size(59, 65);
+            this.btnUserLogin.Size = new System.Drawing.Size(59, 60);
             this.btnUserLogin.TabIndex = 23;
             this.btnUserLogin.Text = "Login";
             this.btnUserLogin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnUserLogin.UseVisualStyleBackColor = false;
+            this.btnUserLogin.Click += new System.EventHandler(this.btnUserLogin_Click);
             // 
             // btnUserNew
             // 
             this.btnUserNew.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnUserNew.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnUserNew.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnUserNew.Location = new System.Drawing.Point(240, 12);
+            this.btnUserNew.Location = new System.Drawing.Point(290, 244);
             this.btnUserNew.Name = "btnUserNew";
-            this.btnUserNew.Size = new System.Drawing.Size(59, 65);
+            this.btnUserNew.Size = new System.Drawing.Size(72, 65);
             this.btnUserNew.TabIndex = 24;
             this.btnUserNew.Text = "New User";
             this.btnUserNew.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -87,7 +92,7 @@
             // lblUserName
             // 
             this.lblUserName.AutoSize = true;
-            this.lblUserName.Location = new System.Drawing.Point(23, 133);
+            this.lblUserName.Location = new System.Drawing.Point(21, 244);
             this.lblUserName.Name = "lblUserName";
             this.lblUserName.Size = new System.Drawing.Size(52, 20);
             this.lblUserName.TabIndex = 25;
@@ -96,7 +101,7 @@
             // lblUserDOB
             // 
             this.lblUserDOB.AutoSize = true;
-            this.lblUserDOB.Location = new System.Drawing.Point(23, 232);
+            this.lblUserDOB.Location = new System.Drawing.Point(21, 343);
             this.lblUserDOB.Name = "lblUserDOB";
             this.lblUserDOB.Size = new System.Drawing.Size(43, 20);
             this.lblUserDOB.TabIndex = 26;
@@ -105,7 +110,7 @@
             // lblUserWeight
             // 
             this.lblUserWeight.AutoSize = true;
-            this.lblUserWeight.Location = new System.Drawing.Point(23, 199);
+            this.lblUserWeight.Location = new System.Drawing.Point(21, 310);
             this.lblUserWeight.Name = "lblUserWeight";
             this.lblUserWeight.Size = new System.Drawing.Size(59, 20);
             this.lblUserWeight.TabIndex = 27;
@@ -114,7 +119,7 @@
             // lblUserHeight
             // 
             this.lblUserHeight.AutoSize = true;
-            this.lblUserHeight.Location = new System.Drawing.Point(23, 166);
+            this.lblUserHeight.Location = new System.Drawing.Point(21, 277);
             this.lblUserHeight.Name = "lblUserHeight";
             this.lblUserHeight.Size = new System.Drawing.Size(57, 20);
             this.lblUserHeight.TabIndex = 28;
@@ -122,7 +127,7 @@
             // 
             // txtUserName
             // 
-            this.txtUserName.Location = new System.Drawing.Point(93, 130);
+            this.txtUserName.Location = new System.Drawing.Point(91, 241);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.ReadOnly = true;
             this.txtUserName.Size = new System.Drawing.Size(176, 27);
@@ -130,7 +135,7 @@
             // 
             // txtUserWeight
             // 
-            this.txtUserWeight.Location = new System.Drawing.Point(93, 196);
+            this.txtUserWeight.Location = new System.Drawing.Point(91, 307);
             this.txtUserWeight.Name = "txtUserWeight";
             this.txtUserWeight.ReadOnly = true;
             this.txtUserWeight.Size = new System.Drawing.Size(176, 27);
@@ -138,7 +143,7 @@
             // 
             // txtUserHeight
             // 
-            this.txtUserHeight.Location = new System.Drawing.Point(93, 163);
+            this.txtUserHeight.Location = new System.Drawing.Point(91, 274);
             this.txtUserHeight.Name = "txtUserHeight";
             this.txtUserHeight.ReadOnly = true;
             this.txtUserHeight.Size = new System.Drawing.Size(176, 27);
@@ -149,7 +154,7 @@
             this.btnUserCreate.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnUserCreate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnUserCreate.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnUserCreate.Location = new System.Drawing.Point(292, 293);
+            this.btnUserCreate.Location = new System.Drawing.Point(290, 404);
             this.btnUserCreate.Name = "btnUserCreate";
             this.btnUserCreate.Size = new System.Drawing.Size(72, 65);
             this.btnUserCreate.TabIndex = 33;
@@ -161,7 +166,7 @@
             // 
             // txtUserPassword
             // 
-            this.txtUserPassword.Location = new System.Drawing.Point(93, 293);
+            this.txtUserPassword.Location = new System.Drawing.Point(91, 404);
             this.txtUserPassword.Name = "txtUserPassword";
             this.txtUserPassword.PasswordChar = '*';
             this.txtUserPassword.ReadOnly = true;
@@ -170,7 +175,7 @@
             // 
             // txtUserPasswordConfirm
             // 
-            this.txtUserPasswordConfirm.Location = new System.Drawing.Point(93, 326);
+            this.txtUserPasswordConfirm.Location = new System.Drawing.Point(91, 437);
             this.txtUserPasswordConfirm.Name = "txtUserPasswordConfirm";
             this.txtUserPasswordConfirm.PasswordChar = '*';
             this.txtUserPasswordConfirm.ReadOnly = true;
@@ -180,7 +185,7 @@
             // lblPasswordConfirm
             // 
             this.lblPasswordConfirm.AutoSize = true;
-            this.lblPasswordConfirm.Location = new System.Drawing.Point(23, 329);
+            this.lblPasswordConfirm.Location = new System.Drawing.Point(21, 440);
             this.lblPasswordConfirm.Name = "lblPasswordConfirm";
             this.lblPasswordConfirm.Size = new System.Drawing.Size(65, 20);
             this.lblPasswordConfirm.TabIndex = 36;
@@ -189,7 +194,7 @@
             // lblUserPassword
             // 
             this.lblUserPassword.AutoSize = true;
-            this.lblUserPassword.Location = new System.Drawing.Point(23, 296);
+            this.lblUserPassword.Location = new System.Drawing.Point(21, 407);
             this.lblUserPassword.Name = "lblUserPassword";
             this.lblUserPassword.Size = new System.Drawing.Size(73, 20);
             this.lblUserPassword.TabIndex = 37;
@@ -198,16 +203,53 @@
             // dateTimeDOB
             // 
             this.dateTimeDOB.Enabled = false;
-            this.dateTimeDOB.Location = new System.Drawing.Point(93, 232);
+            this.dateTimeDOB.Location = new System.Drawing.Point(91, 343);
             this.dateTimeDOB.Name = "dateTimeDOB";
             this.dateTimeDOB.Size = new System.Drawing.Size(176, 27);
             this.dateTimeDOB.TabIndex = 38;
+            // 
+            // txtUserLoginUsername
+            // 
+            this.txtUserLoginUsername.Location = new System.Drawing.Point(170, 22);
+            this.txtUserLoginUsername.Name = "txtUserLoginUsername";
+            this.txtUserLoginUsername.Size = new System.Drawing.Size(138, 27);
+            this.txtUserLoginUsername.TabIndex = 40;
+            // 
+            // lblUserUsername
+            // 
+            this.lblUserUsername.AutoSize = true;
+            this.lblUserUsername.Location = new System.Drawing.Point(87, 25);
+            this.lblUserUsername.Name = "lblUserUsername";
+            this.lblUserUsername.Size = new System.Drawing.Size(78, 20);
+            this.lblUserUsername.TabIndex = 39;
+            this.lblUserUsername.Text = "Username:";
+            // 
+            // lblUserLoginPassword
+            // 
+            this.lblUserLoginPassword.AutoSize = true;
+            this.lblUserLoginPassword.Location = new System.Drawing.Point(92, 57);
+            this.lblUserLoginPassword.Name = "lblUserLoginPassword";
+            this.lblUserLoginPassword.Size = new System.Drawing.Size(73, 20);
+            this.lblUserLoginPassword.TabIndex = 42;
+            this.lblUserLoginPassword.Text = "Password:";
+            // 
+            // txtUserLoginPassword
+            // 
+            this.txtUserLoginPassword.Location = new System.Drawing.Point(170, 55);
+            this.txtUserLoginPassword.Name = "txtUserLoginPassword";
+            this.txtUserLoginPassword.PasswordChar = '*';
+            this.txtUserLoginPassword.Size = new System.Drawing.Size(138, 27);
+            this.txtUserLoginPassword.TabIndex = 41;
             // 
             // UserManagementForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(376, 521);
+            this.Controls.Add(this.lblUserLoginPassword);
+            this.Controls.Add(this.txtUserLoginPassword);
+            this.Controls.Add(this.txtUserLoginUsername);
+            this.Controls.Add(this.lblUserUsername);
             this.Controls.Add(this.dateTimeDOB);
             this.Controls.Add(this.lblUserPassword);
             this.Controls.Add(this.lblPasswordConfirm);
@@ -251,5 +293,9 @@
         private Label lblPasswordConfirm;
         private Label lblUserPassword;
         private DateTimePicker dateTimeDOB;
+        private TextBox txtUserLoginUsername;
+        private Label lblUserUsername;
+        private Label lblUserLoginPassword;
+        private TextBox txtUserLoginPassword;
     }
 }
