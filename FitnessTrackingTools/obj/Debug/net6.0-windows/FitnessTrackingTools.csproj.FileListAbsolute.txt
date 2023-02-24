@@ -17,3 +17,4 @@ C:\Users\taful\Source\Repos\CS-Year-2---Professionalism-Project\FitnessTrackingT
 C:\Users\taful\Source\Repos\CS-Year-2---Professionalism-Project\FitnessTrackingTools\obj\Debug\net6.0-windows\ref\FitnessTrackingTools.dll
 C:\Users\taful\source\repos\CS-Year-2---Professionalism-Project\FitnessTrackingTools\obj\Debug\net6.0-windows\FitnessTrackingTools.UserManagementForm.resources
 C:\Users\taful\source\repos\CS-Year-2---Professionalism-Project\FitnessTrackingTools\obj\Debug\net6.0-windows\FitnessTrackingTools.Form1.resources
+C:\Users\taful\source\repos\CS-Year-2---Professionalism-Project\FitnessTrackingTools\obj\Debug\net6.0-windows\FitnessTrackingTools.ExerciseLogger.resources

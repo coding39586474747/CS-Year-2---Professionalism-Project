@@ -65,7 +65,32 @@ namespace FitnessTrackingTools
 
         private void btnPlus_Click(object sender, EventArgs e)
         {
+            if (user.Name == "null user")
+            {
+                MessageBox.Show("You must be logged in to begin logging exercises");
+                return;
+            }
 
+            bool isFormOpen = false;
+
+            // Check if there's an instance of ExerciseLogger open
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form is ExerciseLogger)
+                {
+                    isFormOpen = true;
+                    form.Focus();
+                    break;
+                }
+
+            }
+
+            // If no instance of UserManagementForm is open, create a new one
+            if (!isFormOpen)
+            {
+                ExerciseLogger ExerciseLoggerForm = new ExerciseLogger(this, user);
+                ExerciseLoggerForm.Show();
+            }
         }
 
         private void btnAchievement_Click(object sender, EventArgs e)
@@ -91,6 +116,7 @@ namespace FitnessTrackingTools
                     form.Focus();
                     break;
                 }
+
             }
 
             // If no instance of UserManagementForm is open, create a new one
