@@ -280,63 +280,58 @@
             // picToolCover
             // 
             this.picToolCover.Enabled = false;
-            this.picToolCover.Location = new System.Drawing.Point(1, 101);
+            this.picToolCover.Location = new System.Drawing.Point(593, 58);
             this.picToolCover.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.picToolCover.Name = "picToolCover";
             this.picToolCover.Size = new System.Drawing.Size(291, 415);
             this.picToolCover.TabIndex = 18;
             this.picToolCover.TabStop = false;
-            this.picToolCover.Visible = false;
             // 
             // txtTimerHours
             // 
             this.txtTimerHours.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtTimerHours.Location = new System.Drawing.Point(431, 59);
+            this.txtTimerHours.Location = new System.Drawing.Point(487, 63);
             this.txtTimerHours.MaxLength = 2;
             this.txtTimerHours.Name = "txtTimerHours";
             this.txtTimerHours.Size = new System.Drawing.Size(47, 47);
             this.txtTimerHours.TabIndex = 19;
             this.txtTimerHours.Text = "00";
             this.txtTimerHours.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtTimerHours.Visible = false;
             // 
             // txtTimerSeconds
             // 
             this.txtTimerSeconds.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtTimerSeconds.Location = new System.Drawing.Point(537, 60);
+            this.txtTimerSeconds.Location = new System.Drawing.Point(593, 64);
             this.txtTimerSeconds.MaxLength = 2;
             this.txtTimerSeconds.Name = "txtTimerSeconds";
             this.txtTimerSeconds.Size = new System.Drawing.Size(47, 47);
             this.txtTimerSeconds.TabIndex = 20;
             this.txtTimerSeconds.Text = "00";
             this.txtTimerSeconds.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtTimerSeconds.Visible = false;
             // 
             // txtTimerMinutes
             // 
             this.txtTimerMinutes.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtTimerMinutes.Location = new System.Drawing.Point(484, 60);
+            this.txtTimerMinutes.Location = new System.Drawing.Point(540, 64);
             this.txtTimerMinutes.MaxLength = 2;
             this.txtTimerMinutes.Name = "txtTimerMinutes";
             this.txtTimerMinutes.Size = new System.Drawing.Size(47, 47);
             this.txtTimerMinutes.TabIndex = 21;
             this.txtTimerMinutes.Text = "00";
             this.txtTimerMinutes.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtTimerMinutes.Visible = false;
             // 
             // btnTimerStart
             // 
             this.btnTimerStart.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnTimerStart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnTimerStart.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnTimerStart.Location = new System.Drawing.Point(393, 126);
+            this.btnTimerStart.Location = new System.Drawing.Point(453, 126);
             this.btnTimerStart.Name = "btnTimerStart";
             this.btnTimerStart.Size = new System.Drawing.Size(59, 65);
             this.btnTimerStart.TabIndex = 22;
             this.btnTimerStart.Text = "Start";
             this.btnTimerStart.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTimerStart.UseVisualStyleBackColor = false;
-            this.btnTimerStart.Visible = false;
             this.btnTimerStart.Click += new System.EventHandler(this.btnTimerStart_Click);
             // 
             // btnTimerStop
@@ -344,14 +339,13 @@
             this.btnTimerStop.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnTimerStop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnTimerStop.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnTimerStop.Location = new System.Drawing.Point(472, 126);
+            this.btnTimerStop.Location = new System.Drawing.Point(532, 126);
             this.btnTimerStop.Name = "btnTimerStop";
             this.btnTimerStop.Size = new System.Drawing.Size(59, 65);
             this.btnTimerStop.TabIndex = 23;
             this.btnTimerStop.Text = "Stop";
             this.btnTimerStop.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTimerStop.UseVisualStyleBackColor = false;
-            this.btnTimerStop.Visible = false;
             this.btnTimerStop.Click += new System.EventHandler(this.btnTimerStop_Click);
             // 
             // btnTimerReset
@@ -359,84 +353,77 @@
             this.btnTimerReset.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnTimerReset.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnTimerReset.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnTimerReset.Location = new System.Drawing.Point(546, 126);
+            this.btnTimerReset.Location = new System.Drawing.Point(606, 126);
             this.btnTimerReset.Name = "btnTimerReset";
             this.btnTimerReset.Size = new System.Drawing.Size(59, 65);
             this.btnTimerReset.TabIndex = 24;
             this.btnTimerReset.Text = "Reset";
             this.btnTimerReset.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTimerReset.UseVisualStyleBackColor = false;
-            this.btnTimerReset.Visible = false;
             this.btnTimerReset.Click += new System.EventHandler(this.btnTimerReset_Click);
             // 
             // lblTimerHoursDisplay
             // 
             this.lblTimerHoursDisplay.AutoSize = true;
             this.lblTimerHoursDisplay.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblTimerHoursDisplay.Location = new System.Drawing.Point(428, 210);
+            this.lblTimerHoursDisplay.Location = new System.Drawing.Point(485, 204);
             this.lblTimerHoursDisplay.Name = "lblTimerHoursDisplay";
             this.lblTimerHoursDisplay.Size = new System.Drawing.Size(50, 41);
             this.lblTimerHoursDisplay.TabIndex = 25;
             this.lblTimerHoursDisplay.Text = "00";
-            this.lblTimerHoursDisplay.Visible = false;
             // 
             // lblTimerMinutesDisplay
             // 
             this.lblTimerMinutesDisplay.AutoSize = true;
             this.lblTimerMinutesDisplay.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblTimerMinutesDisplay.Location = new System.Drawing.Point(481, 210);
+            this.lblTimerMinutesDisplay.Location = new System.Drawing.Point(538, 204);
             this.lblTimerMinutesDisplay.Name = "lblTimerMinutesDisplay";
             this.lblTimerMinutesDisplay.Size = new System.Drawing.Size(50, 41);
             this.lblTimerMinutesDisplay.TabIndex = 26;
             this.lblTimerMinutesDisplay.Text = "00";
-            this.lblTimerMinutesDisplay.Visible = false;
             // 
             // lblTimerSecondsDisplay
             // 
             this.lblTimerSecondsDisplay.AutoSize = true;
             this.lblTimerSecondsDisplay.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblTimerSecondsDisplay.Location = new System.Drawing.Point(534, 210);
+            this.lblTimerSecondsDisplay.Location = new System.Drawing.Point(591, 204);
             this.lblTimerSecondsDisplay.Name = "lblTimerSecondsDisplay";
             this.lblTimerSecondsDisplay.Size = new System.Drawing.Size(50, 41);
             this.lblTimerSecondsDisplay.TabIndex = 27;
             this.lblTimerSecondsDisplay.Text = "00";
-            this.lblTimerSecondsDisplay.Visible = false;
             // 
             // lblTimerName
             // 
             this.lblTimerName.AutoSize = true;
             this.lblTimerName.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblTimerName.Location = new System.Drawing.Point(461, 5);
+            this.lblTimerName.Location = new System.Drawing.Point(517, 13);
             this.lblTimerName.Name = "lblTimerName";
             this.lblTimerName.Size = new System.Drawing.Size(93, 41);
             this.lblTimerName.TabIndex = 28;
             this.lblTimerName.Text = "Timer";
-            this.lblTimerName.Visible = false;
             // 
             // lblStopwatchName
             // 
             this.lblStopwatchName.AutoSize = true;
             this.lblStopwatchName.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblStopwatchName.Location = new System.Drawing.Point(826, 9);
+            this.lblStopwatchName.Location = new System.Drawing.Point(747, 21);
             this.lblStopwatchName.Name = "lblStopwatchName";
             this.lblStopwatchName.Size = new System.Drawing.Size(157, 41);
             this.lblStopwatchName.TabIndex = 29;
             this.lblStopwatchName.Text = "Stopwatch";
-            this.lblStopwatchName.Visible = false;
             // 
             // btnStopwatchReset
             // 
             this.btnStopwatchReset.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnStopwatchReset.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnStopwatchReset.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnStopwatchReset.Location = new System.Drawing.Point(903, 210);
+            this.btnStopwatchReset.Location = new System.Drawing.Point(1002, 142);
             this.btnStopwatchReset.Name = "btnStopwatchReset";
             this.btnStopwatchReset.Size = new System.Drawing.Size(59, 65);
             this.btnStopwatchReset.TabIndex = 35;
             this.btnStopwatchReset.Text = "Reset";
             this.btnStopwatchReset.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnStopwatchReset.UseVisualStyleBackColor = false;
-            this.btnStopwatchReset.Visible = false;
             this.btnStopwatchReset.Click += new System.EventHandler(this.btnStopwatchReset_Click);
             // 
             // btnStopwatchStop
@@ -444,14 +431,13 @@
             this.btnStopwatchStop.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnStopwatchStop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnStopwatchStop.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnStopwatchStop.Location = new System.Drawing.Point(903, 126);
+            this.btnStopwatchStop.Location = new System.Drawing.Point(1002, 58);
             this.btnStopwatchStop.Name = "btnStopwatchStop";
             this.btnStopwatchStop.Size = new System.Drawing.Size(59, 65);
             this.btnStopwatchStop.TabIndex = 34;
             this.btnStopwatchStop.Text = "Stop";
             this.btnStopwatchStop.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnStopwatchStop.UseVisualStyleBackColor = false;
-            this.btnStopwatchStop.Visible = false;
             this.btnStopwatchStop.Click += new System.EventHandler(this.btnStopwatchStop_Click);
             // 
             // btnStopwatchStart
@@ -459,243 +445,222 @@
             this.btnStopwatchStart.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnStopwatchStart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnStopwatchStart.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnStopwatchStart.Location = new System.Drawing.Point(824, 126);
+            this.btnStopwatchStart.Location = new System.Drawing.Point(923, 58);
             this.btnStopwatchStart.Name = "btnStopwatchStart";
             this.btnStopwatchStart.Size = new System.Drawing.Size(59, 65);
             this.btnStopwatchStart.TabIndex = 33;
             this.btnStopwatchStart.Text = "Start";
             this.btnStopwatchStart.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnStopwatchStart.UseVisualStyleBackColor = false;
-            this.btnStopwatchStart.Visible = false;
             this.btnStopwatchStart.Click += new System.EventHandler(this.btnStopwatchStart_Click);
             // 
             // lblStopwatchSeconds
             // 
             this.lblStopwatchSeconds.AutoSize = true;
             this.lblStopwatchSeconds.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblStopwatchSeconds.Location = new System.Drawing.Point(925, 66);
+            this.lblStopwatchSeconds.Location = new System.Drawing.Point(853, 70);
             this.lblStopwatchSeconds.Name = "lblStopwatchSeconds";
             this.lblStopwatchSeconds.Size = new System.Drawing.Size(50, 41);
             this.lblStopwatchSeconds.TabIndex = 38;
             this.lblStopwatchSeconds.Text = "00";
-            this.lblStopwatchSeconds.Visible = false;
             // 
             // lblStopwatchMinutes
             // 
             this.lblStopwatchMinutes.AutoSize = true;
             this.lblStopwatchMinutes.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblStopwatchMinutes.Location = new System.Drawing.Point(872, 66);
+            this.lblStopwatchMinutes.Location = new System.Drawing.Point(800, 70);
             this.lblStopwatchMinutes.Name = "lblStopwatchMinutes";
             this.lblStopwatchMinutes.Size = new System.Drawing.Size(50, 41);
             this.lblStopwatchMinutes.TabIndex = 37;
             this.lblStopwatchMinutes.Text = "00";
-            this.lblStopwatchMinutes.Visible = false;
             // 
             // lblStopwatchHours
             // 
             this.lblStopwatchHours.AutoSize = true;
             this.lblStopwatchHours.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblStopwatchHours.Location = new System.Drawing.Point(819, 66);
+            this.lblStopwatchHours.Location = new System.Drawing.Point(747, 70);
             this.lblStopwatchHours.Name = "lblStopwatchHours";
             this.lblStopwatchHours.Size = new System.Drawing.Size(50, 41);
             this.lblStopwatchHours.TabIndex = 36;
             this.lblStopwatchHours.Text = "00";
-            this.lblStopwatchHours.Visible = false;
             // 
             // btnStopwatchLap
             // 
             this.btnStopwatchLap.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnStopwatchLap.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnStopwatchLap.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnStopwatchLap.Location = new System.Drawing.Point(824, 210);
+            this.btnStopwatchLap.Location = new System.Drawing.Point(923, 142);
             this.btnStopwatchLap.Name = "btnStopwatchLap";
             this.btnStopwatchLap.Size = new System.Drawing.Size(59, 65);
             this.btnStopwatchLap.TabIndex = 39;
             this.btnStopwatchLap.Text = "Lap";
             this.btnStopwatchLap.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnStopwatchLap.UseVisualStyleBackColor = false;
-            this.btnStopwatchLap.Visible = false;
             this.btnStopwatchLap.Click += new System.EventHandler(this.btnStopwatchLap_Click);
             // 
             // lstStopwatchLaps
             // 
             this.lstStopwatchLaps.FormattingEnabled = true;
             this.lstStopwatchLaps.ItemHeight = 20;
-            this.lstStopwatchLaps.Location = new System.Drawing.Point(1002, 77);
+            this.lstStopwatchLaps.Location = new System.Drawing.Point(753, 118);
             this.lstStopwatchLaps.Name = "lstStopwatchLaps";
-            this.lstStopwatchLaps.Size = new System.Drawing.Size(150, 204);
+            this.lstStopwatchLaps.Size = new System.Drawing.Size(150, 104);
             this.lstStopwatchLaps.TabIndex = 40;
-            this.lstStopwatchLaps.Visible = false;
             // 
             // lblIntervalName
             // 
             this.lblIntervalName.AutoSize = true;
             this.lblIntervalName.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblIntervalName.Location = new System.Drawing.Point(441, 270);
+            this.lblIntervalName.Location = new System.Drawing.Point(517, 258);
             this.lblIntervalName.Name = "lblIntervalName";
             this.lblIntervalName.Size = new System.Drawing.Size(128, 41);
             this.lblIntervalName.TabIndex = 41;
             this.lblIntervalName.Text = "Intervals";
-            this.lblIntervalName.Visible = false;
             // 
             // txtIntervalMinW
             // 
             this.txtIntervalMinW.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtIntervalMinW.Location = new System.Drawing.Point(388, 348);
+            this.txtIntervalMinW.Location = new System.Drawing.Point(452, 336);
             this.txtIntervalMinW.MaxLength = 2;
             this.txtIntervalMinW.Name = "txtIntervalMinW";
             this.txtIntervalMinW.Size = new System.Drawing.Size(47, 47);
             this.txtIntervalMinW.TabIndex = 44;
             this.txtIntervalMinW.Text = "00";
             this.txtIntervalMinW.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtIntervalMinW.Visible = false;
             // 
             // txtIntervalSecW
             // 
             this.txtIntervalSecW.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtIntervalSecW.Location = new System.Drawing.Point(441, 348);
+            this.txtIntervalSecW.Location = new System.Drawing.Point(505, 336);
             this.txtIntervalSecW.MaxLength = 2;
             this.txtIntervalSecW.Name = "txtIntervalSecW";
             this.txtIntervalSecW.Size = new System.Drawing.Size(47, 47);
             this.txtIntervalSecW.TabIndex = 43;
             this.txtIntervalSecW.Text = "00";
             this.txtIntervalSecW.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtIntervalSecW.Visible = false;
             // 
             // txtIntervalMinB
             // 
             this.txtIntervalMinB.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtIntervalMinB.Location = new System.Drawing.Point(508, 348);
+            this.txtIntervalMinB.Location = new System.Drawing.Point(572, 336);
             this.txtIntervalMinB.MaxLength = 2;
             this.txtIntervalMinB.Name = "txtIntervalMinB";
             this.txtIntervalMinB.Size = new System.Drawing.Size(47, 47);
             this.txtIntervalMinB.TabIndex = 47;
             this.txtIntervalMinB.Text = "00";
             this.txtIntervalMinB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtIntervalMinB.Visible = false;
             // 
             // txtIntervalSecB
             // 
             this.txtIntervalSecB.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtIntervalSecB.Location = new System.Drawing.Point(561, 348);
+            this.txtIntervalSecB.Location = new System.Drawing.Point(625, 336);
             this.txtIntervalSecB.MaxLength = 2;
             this.txtIntervalSecB.Name = "txtIntervalSecB";
             this.txtIntervalSecB.Size = new System.Drawing.Size(47, 47);
             this.txtIntervalSecB.TabIndex = 46;
             this.txtIntervalSecB.Text = "00";
             this.txtIntervalSecB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtIntervalSecB.Visible = false;
             // 
             // txtIntervalLapCount
             // 
             this.txtIntervalLapCount.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtIntervalLapCount.Location = new System.Drawing.Point(623, 348);
+            this.txtIntervalLapCount.Location = new System.Drawing.Point(687, 336);
             this.txtIntervalLapCount.MaxLength = 2;
             this.txtIntervalLapCount.Name = "txtIntervalLapCount";
             this.txtIntervalLapCount.Size = new System.Drawing.Size(47, 47);
             this.txtIntervalLapCount.TabIndex = 48;
             this.txtIntervalLapCount.Text = "00";
             this.txtIntervalLapCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtIntervalLapCount.Visible = false;
             // 
             // lblIntervalWork
             // 
             this.lblIntervalWork.AutoSize = true;
-            this.lblIntervalWork.Location = new System.Drawing.Point(392, 320);
+            this.lblIntervalWork.Location = new System.Drawing.Point(456, 308);
             this.lblIntervalWork.Name = "lblIntervalWork";
             this.lblIntervalWork.Size = new System.Drawing.Size(80, 20);
             this.lblIntervalWork.TabIndex = 49;
             this.lblIntervalWork.Text = "Work Time";
-            this.lblIntervalWork.Visible = false;
             // 
             // lblIntervalBreak
             // 
             this.lblIntervalBreak.AutoSize = true;
-            this.lblIntervalBreak.Location = new System.Drawing.Point(508, 320);
+            this.lblIntervalBreak.Location = new System.Drawing.Point(572, 308);
             this.lblIntervalBreak.Name = "lblIntervalBreak";
             this.lblIntervalBreak.Size = new System.Drawing.Size(83, 20);
             this.lblIntervalBreak.TabIndex = 50;
             this.lblIntervalBreak.Text = "Break Time";
-            this.lblIntervalBreak.Visible = false;
             // 
             // lblIntervalLaps
             // 
             this.lblIntervalLaps.AutoSize = true;
-            this.lblIntervalLaps.Location = new System.Drawing.Point(623, 320);
+            this.lblIntervalLaps.Location = new System.Drawing.Point(687, 308);
             this.lblIntervalLaps.Name = "lblIntervalLaps";
             this.lblIntervalLaps.Size = new System.Drawing.Size(39, 20);
             this.lblIntervalLaps.TabIndex = 51;
             this.lblIntervalLaps.Text = "Laps";
-            this.lblIntervalLaps.Visible = false;
             // 
             // lblIntervalMinB
             // 
             this.lblIntervalMinB.AutoSize = true;
             this.lblIntervalMinB.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblIntervalMinB.Location = new System.Drawing.Point(508, 403);
+            this.lblIntervalMinB.Location = new System.Drawing.Point(572, 391);
             this.lblIntervalMinB.Name = "lblIntervalMinB";
             this.lblIntervalMinB.Size = new System.Drawing.Size(50, 41);
             this.lblIntervalMinB.TabIndex = 54;
             this.lblIntervalMinB.Text = "00";
-            this.lblIntervalMinB.Visible = false;
             // 
             // lblIntervalSecW
             // 
             this.lblIntervalSecW.AutoSize = true;
             this.lblIntervalSecW.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblIntervalSecW.Location = new System.Drawing.Point(441, 403);
+            this.lblIntervalSecW.Location = new System.Drawing.Point(505, 391);
             this.lblIntervalSecW.Name = "lblIntervalSecW";
             this.lblIntervalSecW.Size = new System.Drawing.Size(50, 41);
             this.lblIntervalSecW.TabIndex = 53;
             this.lblIntervalSecW.Text = "00";
-            this.lblIntervalSecW.Visible = false;
             // 
             // lblIntervalMinW
             // 
             this.lblIntervalMinW.AutoSize = true;
             this.lblIntervalMinW.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblIntervalMinW.Location = new System.Drawing.Point(388, 403);
+            this.lblIntervalMinW.Location = new System.Drawing.Point(452, 391);
             this.lblIntervalMinW.Name = "lblIntervalMinW";
             this.lblIntervalMinW.Size = new System.Drawing.Size(50, 41);
             this.lblIntervalMinW.TabIndex = 52;
             this.lblIntervalMinW.Text = "00";
-            this.lblIntervalMinW.Visible = false;
             // 
             // lblIntervalLapCount
             // 
             this.lblIntervalLapCount.AutoSize = true;
             this.lblIntervalLapCount.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblIntervalLapCount.Location = new System.Drawing.Point(623, 403);
+            this.lblIntervalLapCount.Location = new System.Drawing.Point(687, 391);
             this.lblIntervalLapCount.Name = "lblIntervalLapCount";
             this.lblIntervalLapCount.Size = new System.Drawing.Size(50, 41);
             this.lblIntervalLapCount.TabIndex = 56;
             this.lblIntervalLapCount.Text = "00";
-            this.lblIntervalLapCount.Visible = false;
             // 
             // lblIntervalSecB
             // 
             this.lblIntervalSecB.AutoSize = true;
             this.lblIntervalSecB.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblIntervalSecB.Location = new System.Drawing.Point(561, 403);
+            this.lblIntervalSecB.Location = new System.Drawing.Point(625, 391);
             this.lblIntervalSecB.Name = "lblIntervalSecB";
             this.lblIntervalSecB.Size = new System.Drawing.Size(50, 41);
             this.lblIntervalSecB.TabIndex = 55;
             this.lblIntervalSecB.Text = "00";
-            this.lblIntervalSecB.Visible = false;
             // 
             // btnIntervalReset
             // 
             this.btnIntervalReset.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnIntervalReset.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnIntervalReset.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnIntervalReset.Location = new System.Drawing.Point(572, 451);
+            this.btnIntervalReset.Location = new System.Drawing.Point(636, 439);
             this.btnIntervalReset.Name = "btnIntervalReset";
             this.btnIntervalReset.Size = new System.Drawing.Size(59, 65);
             this.btnIntervalReset.TabIndex = 59;
             this.btnIntervalReset.Text = "Reset";
             this.btnIntervalReset.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnIntervalReset.UseVisualStyleBackColor = false;
-            this.btnIntervalReset.Visible = false;
             this.btnIntervalReset.Click += new System.EventHandler(this.btnIntervalReset_Click);
             // 
             // btnIntervalStop
@@ -703,14 +668,13 @@
             this.btnIntervalStop.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnIntervalStop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnIntervalStop.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnIntervalStop.Location = new System.Drawing.Point(498, 451);
+            this.btnIntervalStop.Location = new System.Drawing.Point(562, 439);
             this.btnIntervalStop.Name = "btnIntervalStop";
             this.btnIntervalStop.Size = new System.Drawing.Size(59, 65);
             this.btnIntervalStop.TabIndex = 58;
             this.btnIntervalStop.Text = "Stop";
             this.btnIntervalStop.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnIntervalStop.UseVisualStyleBackColor = false;
-            this.btnIntervalStop.Visible = false;
             this.btnIntervalStop.Click += new System.EventHandler(this.btnIntervalStop_Click);
             // 
             // btnIntervalStart
@@ -718,64 +682,58 @@
             this.btnIntervalStart.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnIntervalStart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnIntervalStart.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnIntervalStart.Location = new System.Drawing.Point(419, 451);
+            this.btnIntervalStart.Location = new System.Drawing.Point(483, 439);
             this.btnIntervalStart.Name = "btnIntervalStart";
             this.btnIntervalStart.Size = new System.Drawing.Size(59, 65);
             this.btnIntervalStart.TabIndex = 57;
             this.btnIntervalStart.Text = "Start";
             this.btnIntervalStart.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnIntervalStart.UseVisualStyleBackColor = false;
-            this.btnIntervalStart.Visible = false;
             this.btnIntervalStart.Click += new System.EventHandler(this.btnIntervalStart_Click);
             // 
             // lblUnitConverterName
             // 
             this.lblUnitConverterName.AutoSize = true;
             this.lblUnitConverterName.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblUnitConverterName.Location = new System.Drawing.Point(885, 296);
+            this.lblUnitConverterName.Location = new System.Drawing.Point(856, 253);
             this.lblUnitConverterName.Name = "lblUnitConverterName";
             this.lblUnitConverterName.Size = new System.Drawing.Size(211, 41);
             this.lblUnitConverterName.TabIndex = 60;
             this.lblUnitConverterName.Text = "Unit Converter";
-            this.lblUnitConverterName.Visible = false;
             // 
             // txtUnitConverterWeightInput
             // 
-            this.txtUnitConverterWeightInput.Location = new System.Drawing.Point(897, 363);
+            this.txtUnitConverterWeightInput.Location = new System.Drawing.Point(845, 329);
             this.txtUnitConverterWeightInput.MaxLength = 10;
             this.txtUnitConverterWeightInput.Name = "txtUnitConverterWeightInput";
             this.txtUnitConverterWeightInput.Size = new System.Drawing.Size(98, 27);
             this.txtUnitConverterWeightInput.TabIndex = 61;
-            this.txtUnitConverterWeightInput.Visible = false;
             // 
             // txtUnitConverterWeightOutput
             // 
-            this.txtUnitConverterWeightOutput.Location = new System.Drawing.Point(897, 402);
+            this.txtUnitConverterWeightOutput.Location = new System.Drawing.Point(845, 368);
             this.txtUnitConverterWeightOutput.MaxLength = 10;
             this.txtUnitConverterWeightOutput.Name = "txtUnitConverterWeightOutput";
             this.txtUnitConverterWeightOutput.ReadOnly = true;
             this.txtUnitConverterWeightOutput.Size = new System.Drawing.Size(98, 27);
             this.txtUnitConverterWeightOutput.TabIndex = 62;
-            this.txtUnitConverterWeightOutput.Visible = false;
             // 
             // txtUnitConverterDistanceOutput
             // 
-            this.txtUnitConverterDistanceOutput.Location = new System.Drawing.Point(897, 491);
+            this.txtUnitConverterDistanceOutput.Location = new System.Drawing.Point(845, 457);
             this.txtUnitConverterDistanceOutput.MaxLength = 10;
             this.txtUnitConverterDistanceOutput.Name = "txtUnitConverterDistanceOutput";
             this.txtUnitConverterDistanceOutput.ReadOnly = true;
             this.txtUnitConverterDistanceOutput.Size = new System.Drawing.Size(98, 27);
             this.txtUnitConverterDistanceOutput.TabIndex = 64;
-            this.txtUnitConverterDistanceOutput.Visible = false;
             // 
             // txtUnitConverterDistanceInput
             // 
-            this.txtUnitConverterDistanceInput.Location = new System.Drawing.Point(897, 455);
+            this.txtUnitConverterDistanceInput.Location = new System.Drawing.Point(845, 421);
             this.txtUnitConverterDistanceInput.MaxLength = 10;
             this.txtUnitConverterDistanceInput.Name = "txtUnitConverterDistanceInput";
             this.txtUnitConverterDistanceInput.Size = new System.Drawing.Size(98, 27);
             this.txtUnitConverterDistanceInput.TabIndex = 63;
-            this.txtUnitConverterDistanceInput.Visible = false;
             // 
             // dropUnitConverterWeightInput
             // 
@@ -784,11 +742,10 @@
             this.dropUnitConverterWeightInput.Items.AddRange(new object[] {
             "kg",
             "lbs"});
-            this.dropUnitConverterWeightInput.Location = new System.Drawing.Point(1002, 362);
+            this.dropUnitConverterWeightInput.Location = new System.Drawing.Point(950, 328);
             this.dropUnitConverterWeightInput.Name = "dropUnitConverterWeightInput";
             this.dropUnitConverterWeightInput.Size = new System.Drawing.Size(57, 28);
             this.dropUnitConverterWeightInput.TabIndex = 65;
-            this.dropUnitConverterWeightInput.Visible = false;
             // 
             // dropUnitConverterWeightOutput
             // 
@@ -797,11 +754,10 @@
             this.dropUnitConverterWeightOutput.Items.AddRange(new object[] {
             "kg",
             "lbs"});
-            this.dropUnitConverterWeightOutput.Location = new System.Drawing.Point(1000, 402);
+            this.dropUnitConverterWeightOutput.Location = new System.Drawing.Point(948, 368);
             this.dropUnitConverterWeightOutput.Name = "dropUnitConverterWeightOutput";
             this.dropUnitConverterWeightOutput.Size = new System.Drawing.Size(57, 28);
             this.dropUnitConverterWeightOutput.TabIndex = 66;
-            this.dropUnitConverterWeightOutput.Visible = false;
             // 
             // dropUnitConverterDistanceInput
             // 
@@ -810,11 +766,10 @@
             this.dropUnitConverterDistanceInput.Items.AddRange(new object[] {
             "Km",
             "Miles"});
-            this.dropUnitConverterDistanceInput.Location = new System.Drawing.Point(1002, 454);
+            this.dropUnitConverterDistanceInput.Location = new System.Drawing.Point(950, 420);
             this.dropUnitConverterDistanceInput.Name = "dropUnitConverterDistanceInput";
             this.dropUnitConverterDistanceInput.Size = new System.Drawing.Size(57, 28);
             this.dropUnitConverterDistanceInput.TabIndex = 67;
-            this.dropUnitConverterDistanceInput.Visible = false;
             // 
             // dropUnitConverterDistanceOutput
             // 
@@ -823,45 +778,41 @@
             this.dropUnitConverterDistanceOutput.Items.AddRange(new object[] {
             "Km",
             "Miles"});
-            this.dropUnitConverterDistanceOutput.Location = new System.Drawing.Point(1000, 491);
+            this.dropUnitConverterDistanceOutput.Location = new System.Drawing.Point(948, 457);
             this.dropUnitConverterDistanceOutput.Name = "dropUnitConverterDistanceOutput";
             this.dropUnitConverterDistanceOutput.Size = new System.Drawing.Size(57, 28);
             this.dropUnitConverterDistanceOutput.TabIndex = 68;
-            this.dropUnitConverterDistanceOutput.Visible = false;
             // 
             // lblUnitConverterWeightName
             // 
             this.lblUnitConverterWeightName.AutoSize = true;
-            this.lblUnitConverterWeightName.Location = new System.Drawing.Point(899, 337);
+            this.lblUnitConverterWeightName.Location = new System.Drawing.Point(847, 303);
             this.lblUnitConverterWeightName.Name = "lblUnitConverterWeightName";
             this.lblUnitConverterWeightName.Size = new System.Drawing.Size(56, 20);
             this.lblUnitConverterWeightName.TabIndex = 69;
             this.lblUnitConverterWeightName.Text = "Weight";
-            this.lblUnitConverterWeightName.Visible = false;
             // 
             // lblUnitConverterDistanceName
             // 
             this.lblUnitConverterDistanceName.AutoSize = true;
-            this.lblUnitConverterDistanceName.Location = new System.Drawing.Point(902, 432);
+            this.lblUnitConverterDistanceName.Location = new System.Drawing.Point(850, 398);
             this.lblUnitConverterDistanceName.Name = "lblUnitConverterDistanceName";
             this.lblUnitConverterDistanceName.Size = new System.Drawing.Size(66, 20);
             this.lblUnitConverterDistanceName.TabIndex = 70;
             this.lblUnitConverterDistanceName.Text = "Distance";
-            this.lblUnitConverterDistanceName.Visible = false;
             // 
             // btnUnitConverterWeight
             // 
             this.btnUnitConverterWeight.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnUnitConverterWeight.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnUnitConverterWeight.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnUnitConverterWeight.Location = new System.Drawing.Point(1065, 362);
+            this.btnUnitConverterWeight.Location = new System.Drawing.Point(1013, 328);
             this.btnUnitConverterWeight.Name = "btnUnitConverterWeight";
             this.btnUnitConverterWeight.Size = new System.Drawing.Size(73, 65);
             this.btnUnitConverterWeight.TabIndex = 71;
             this.btnUnitConverterWeight.Text = "Convert";
             this.btnUnitConverterWeight.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnUnitConverterWeight.UseVisualStyleBackColor = false;
-            this.btnUnitConverterWeight.Visible = false;
             this.btnUnitConverterWeight.Click += new System.EventHandler(this.btnUnitConverterWeight_Click);
             // 
             // btnUnitConverterDistance
@@ -869,21 +820,20 @@
             this.btnUnitConverterDistance.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnUnitConverterDistance.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnUnitConverterDistance.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnUnitConverterDistance.Location = new System.Drawing.Point(1065, 455);
+            this.btnUnitConverterDistance.Location = new System.Drawing.Point(1013, 421);
             this.btnUnitConverterDistance.Name = "btnUnitConverterDistance";
             this.btnUnitConverterDistance.Size = new System.Drawing.Size(73, 65);
             this.btnUnitConverterDistance.TabIndex = 72;
             this.btnUnitConverterDistance.Text = "Convert";
             this.btnUnitConverterDistance.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnUnitConverterDistance.UseVisualStyleBackColor = false;
-            this.btnUnitConverterDistance.Visible = false;
             this.btnUnitConverterDistance.Click += new System.EventHandler(this.btnUnitConverterDistance_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1174, 527);
+            this.ClientSize = new System.Drawing.Size(377, 527);
             this.Controls.Add(this.btnUnitConverterDistance);
             this.Controls.Add(this.btnUnitConverterWeight);
             this.Controls.Add(this.lblUnitConverterDistanceName);
@@ -951,7 +901,7 @@
             this.Controls.Add(this.btnAchievement);
             this.Name = "Form1";
             this.Text = "Fitness Tracker";
-            this.Load += new System.EventHandler(this.lblUnitConverterName_Load);
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picClientLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFitnessImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picTimer)).EndInit();

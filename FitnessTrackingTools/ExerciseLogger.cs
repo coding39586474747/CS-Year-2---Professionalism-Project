@@ -24,6 +24,7 @@ namespace FitnessTrackingTools
 
         private void ExerciseLogger_Load(object sender, EventArgs e)
         {
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
             lblLoggerUsernameDisplay.Text = user.Name;
             txtID.Text = updateID().ToString();
         }

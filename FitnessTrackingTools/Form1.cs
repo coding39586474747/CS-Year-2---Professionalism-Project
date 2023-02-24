@@ -33,8 +33,8 @@ namespace FitnessTrackingTools
             {
                 p.Location = new Point(x + 290, y);
                 p.Tag = "open";
-                picToolCover.Visible = true;
-                picToolCover.Enabled = true;
+                btnChallenge.Enabled = false;
+                picToolCover.Location = new Point(1,101);
 
                 if (p.Name == picTimer.Name) timerShow();
                 else if (p.Name == picStopwatch.Name) stopwatchShow();
@@ -45,8 +45,8 @@ namespace FitnessTrackingTools
             {
                 p.Location = new Point(x - 290, y);
                 p.Tag = "closed";
-                picToolCover.Visible = false;
-                picToolCover.Enabled = false;
+                btnChallenge.Enabled = true;
+                picToolCover.Location = new Point(593,58);
 
                 if (p.Name == picTimer.Name) timerHide();
                 else if (p.Name == picStopwatch.Name) stopwatchHide();
@@ -100,7 +100,32 @@ namespace FitnessTrackingTools
 
         private void btnStats_Click(object sender, EventArgs e)
         {
+            if (user.Name == "null user")
+            {
+                MessageBox.Show("You must be logged in to see stats");
+                return;
+            }
 
+            bool isFormOpen = false;
+
+            // Check if there's an instance of UserManagementForm open
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form is StatsForm)
+                {
+                    isFormOpen = true;
+                    form.Focus();
+                    break;
+                }
+
+            }
+
+            // If no instance of UserManagementForm is open, create a new one
+            if (!isFormOpen)
+            {
+                StatsForm statsForm = new StatsForm(this, user);
+                statsForm.Show();
+            }
         }
 
         private void btnUsers_Click(object sender, EventArgs e)
@@ -129,7 +154,7 @@ namespace FitnessTrackingTools
 
         private void btnLogOut_Click(object sender, EventArgs e)
         {
-            
+            User user = new User("null user", 180, 75, new DateTime(1980, 1, 1), "Default");
         }
         private void picFitnessImage_Click(object sender, EventArgs e)
         {
@@ -275,36 +300,36 @@ namespace FitnessTrackingTools
 
         private void timerHide()
         {
-            lblTimerName.Visible = false;
+            lblTimerName.Location = new Point(517, 13);
 
-            lblTimerHoursDisplay.Visible = false;
-            lblTimerMinutesDisplay.Visible = false;
-            lblTimerSecondsDisplay.Visible = false;
+            lblTimerHoursDisplay.Location = new Point(485, 204);
+            lblTimerMinutesDisplay.Location = new Point(538, 204);
+            lblTimerSecondsDisplay.Location = new Point(591, 204);
 
-            txtTimerHours.Visible = false;
-            txtTimerMinutes.Visible = false;
-            txtTimerSeconds.Visible = false;
+            txtTimerHours.Location = new Point(487, 63);
+            txtTimerMinutes.Location = new Point(540, 63);
+            txtTimerSeconds.Location = new Point(593, 63);
 
-            btnTimerStart.Visible = false;
-            btnTimerStop.Visible = false;
-            btnTimerReset.Visible = false;
+            btnTimerStart.Location = new Point(453, 126);
+            btnTimerStop.Location = new Point(532, 126);
+            btnTimerReset.Location = new Point(606, 126);
         }
 
         private void timerShow()
         {
-            lblTimerName.Visible = true;
+            lblTimerName.Location = new Point(99,162);
 
-            lblTimerHoursDisplay.Visible = true;
-            lblTimerMinutesDisplay.Visible = true;
-            lblTimerSecondsDisplay.Visible = true;
+            lblTimerHoursDisplay.Location = new Point(67,353);
+            lblTimerMinutesDisplay.Location = new Point(120,353);
+            lblTimerSecondsDisplay.Location = new Point(173,353);
 
-            txtTimerHours.Visible = true;
-            txtTimerMinutes.Visible = true;
-            txtTimerSeconds.Visible = true;
+            txtTimerHours.Location = new Point(69,212);
+            txtTimerMinutes.Location = new Point(122,212);
+            txtTimerSeconds.Location = new Point(175,212);
 
-            btnTimerStart.Visible = true;
-            btnTimerStop.Visible = true;
-            btnTimerReset.Visible = true;
+            btnTimerStart.Location = new Point(35,275);
+            btnTimerStop.Location = new Point(114,275);
+            btnTimerReset.Location = new Point(188,275);
         }
 
         #endregion TimerControl
@@ -375,34 +400,34 @@ namespace FitnessTrackingTools
 
         public void stopwatchShow()
         {
-            lblStopwatchName.Visible = true;
+            lblStopwatchName.Location = new Point(54,126);
 
-            lblStopwatchHours.Visible = true;
-            lblStopwatchMinutes.Visible = true;
-            lblStopwatchSeconds.Visible = true;
+            lblStopwatchHours.Location = new Point(54,175);
+            lblStopwatchMinutes.Location = new Point(107,175);
+            lblStopwatchSeconds.Location = new Point(160,175);
 
-            btnStopwatchStart.Visible = true;
-            btnStopwatchStop.Visible = true;
-            btnStopwatchReset.Visible = true;
-            btnStopwatchLap.Visible = true;
+            btnStopwatchStart.Location = new Point(62,355);
+            btnStopwatchStop.Location = new Point(141,355);
+            btnStopwatchReset.Location = new Point(62,439);
+            btnStopwatchLap.Location = new Point(141,439);
 
-            lstStopwatchLaps.Visible = true;
+            lstStopwatchLaps.Location = new Point(60,223);
         }
 
         public void stopwatchHide()
         {
-            lblStopwatchName.Visible = false;
+            lblStopwatchName.Location = new Point(1002,77);
 
-            lblStopwatchHours.Visible = false;
-            lblStopwatchMinutes.Visible = false;
-            lblStopwatchSeconds.Visible = false;
+            lblStopwatchHours.Location = new Point(1002,77);
+            lblStopwatchMinutes.Location = new Point(1002,77);
+            lblStopwatchSeconds.Location = new Point(1002,77);
 
-            btnStopwatchStart.Visible = false;
-            btnStopwatchStop.Visible = false;
-            btnStopwatchReset.Visible = false;
-            btnStopwatchLap.Visible = false;
+            btnStopwatchStart.Location = new Point(1002,77);
+            btnStopwatchStop.Location = new Point(1002,77);
+            btnStopwatchReset.Location = new Point(1002,77);
+            btnStopwatchLap.Location = new Point(1002,77);
 
-            lstStopwatchLaps.Visible = false;
+            lstStopwatchLaps.Location = new Point(1002,77);
         }
 
         private void btnStopwatchReset_Click(object sender, EventArgs e)
@@ -577,58 +602,58 @@ namespace FitnessTrackingTools
 
         public void intervalShow()
         {
-            lblIntervalName.Visible = true;
+            lblIntervalName.Location = new Point(68,167);
 
-            lblIntervalWork.Visible = true;
-            lblIntervalBreak.Visible = true;
-            lblIntervalLaps.Visible = true;
+            lblIntervalWork.Location = new Point(7,217);
+            lblIntervalBreak.Location = new Point(123,217);
+            lblIntervalLaps.Location = new Point(238,217);
 
-            lblIntervalMinW.Visible = true;
-            lblIntervalSecW.Visible = true;
+            lblIntervalMinW.Location = new Point(3,300);
+            lblIntervalSecW.Location = new Point(56,300);
 
-            lblIntervalMinB.Visible = true;
-            lblIntervalSecB.Visible = true;
+            lblIntervalMinB.Location = new Point(123,300);
+            lblIntervalSecB.Location = new Point(176,300);
 
-            txtIntervalMinW.Visible = true;
-            txtIntervalSecW.Visible = true;
+            txtIntervalMinW.Location = new Point(3,245);
+            txtIntervalSecW.Location = new Point(56,245);
 
-            txtIntervalMinB.Visible = true;
-            txtIntervalSecB.Visible = true;
+            txtIntervalMinB.Location = new Point(123,245);
+            txtIntervalSecB.Location = new Point(176,245);
 
-            txtIntervalLapCount.Visible = true;
-            lblIntervalLapCount.Visible = true;
+            txtIntervalLapCount.Location = new Point(238,245);
+            lblIntervalLapCount.Location = new Point(238,300);
 
-            btnIntervalStart.Visible = true;
-            btnIntervalStop.Visible = true;
-            btnIntervalReset.Visible = true;
+            btnIntervalStart.Location = new Point(34,348);
+            btnIntervalStop.Location = new Point(113,348);
+            btnIntervalReset.Location = new Point(187,348);
         }
 
         public void intervalHide()
         {
-            lblIntervalName.Visible = false;
+            lblIntervalName.Location = new Point(498, 270);
 
-            lblIntervalWork.Visible = false;
-            lblIntervalBreak.Visible = false;
-            lblIntervalLaps.Visible = false;
+            lblIntervalWork.Location = new Point(498, 270);
+            lblIntervalBreak.Location = new Point(498, 270);
+            lblIntervalLaps.Location = new Point(498, 270);
 
-            lblIntervalMinW.Visible = false;
-            lblIntervalSecW.Visible = false;
+            lblIntervalMinW.Location = new Point(498, 270);
+            lblIntervalSecW.Location = new Point(498, 270);
 
-            lblIntervalMinB.Visible = false;
-            lblIntervalSecB.Visible = false;
+            lblIntervalMinB.Location = new Point(498, 270);
+            lblIntervalSecB.Location = new Point(498, 270);
 
-            txtIntervalMinW.Visible = false;
-            txtIntervalSecW.Visible = false;
+            txtIntervalMinW.Location = new Point(498, 270);
+            txtIntervalSecW.Location = new Point(498, 270);
 
-            txtIntervalMinB.Visible = false;
-            txtIntervalSecB.Visible = false;
+            txtIntervalMinB.Location = new Point(498, 270);
+            txtIntervalSecB.Location = new Point(498, 270);
 
-            txtIntervalLapCount.Visible = false;
-            lblIntervalLapCount.Visible = false;
+            txtIntervalLapCount.Location = new Point(498, 270);
+            lblIntervalLapCount.Location = new Point(498, 270);
 
-            btnIntervalStart.Visible = false;
-            btnIntervalStop.Visible = false;
-            btnIntervalReset.Visible = false;
+            btnIntervalStart.Location = new Point(498, 270);
+            btnIntervalStop.Location = new Point(498, 270);
+            btnIntervalReset.Location = new Point(498, 270);
         }
 
         public delegate void btnIntervalStop_ClickDelegate(object sender, EventArgs e);
@@ -712,56 +737,57 @@ namespace FitnessTrackingTools
 
         private void unitConverterShow()
         {
-            lblUnitConverterName.Visible = true;
-            lblUnitConverterDistanceName.Visible = true;
-            lblUnitConverterWeightName.Visible = true;
+            lblUnitConverterName.Location = new Point(45,150);
+            lblUnitConverterDistanceName.Location = new Point(39,295);
+            lblUnitConverterWeightName.Location = new Point(36,200);
 
-            txtUnitConverterDistanceInput.Visible = true;
-            txtUnitConverterDistanceOutput.Visible = true;
+            txtUnitConverterDistanceInput.Location = new Point(34,318);
+            txtUnitConverterDistanceOutput.Location = new Point(34,354);
 
-            txtUnitConverterWeightInput.Visible = true;
-            txtUnitConverterWeightOutput.Visible = true;
+            txtUnitConverterWeightInput.Location = new Point(34,226);
+            txtUnitConverterWeightOutput.Location = new Point(34,265);
 
-            dropUnitConverterDistanceInput.Visible = true;
-            dropUnitConverterDistanceOutput.Visible = true;
+            dropUnitConverterDistanceInput.Location = new Point(139,317);
+            dropUnitConverterDistanceOutput.Location = new Point(139,354);
 
-            dropUnitConverterWeightInput.Visible = true;
-            dropUnitConverterWeightOutput.Visible = true;
+            dropUnitConverterWeightInput.Location = new Point(139,225);
+            dropUnitConverterWeightOutput.Location = new Point(139,265);
 
-            btnUnitConverterDistance.Visible = true;
-            btnUnitConverterWeight.Visible = true;
+            btnUnitConverterDistance.Location = new Point(202,318);
+            btnUnitConverterWeight.Location = new Point(202,225);
         }
 
         private void unitConverterHide()
         {
-            lblUnitConverterName.Visible = false;
-            lblUnitConverterDistanceName.Visible = false;
-            lblUnitConverterWeightName.Visible = false;
+            lblUnitConverterName.Location = new Point(885,296);
+            lblUnitConverterDistanceName.Location = new Point(885,296);
+            lblUnitConverterWeightName.Location = new Point(885,296);
 
-            txtUnitConverterDistanceInput.Visible = false;
-            txtUnitConverterDistanceOutput.Visible = false;
+            txtUnitConverterDistanceInput.Location = new Point(885,296);
+            txtUnitConverterDistanceOutput.Location = new Point(885,296);
 
-            txtUnitConverterWeightInput.Visible = false;
-            txtUnitConverterWeightOutput.Visible = false;
+            txtUnitConverterWeightInput.Location = new Point(885,296);
+            txtUnitConverterWeightOutput.Location = new Point(885,296);
 
-            dropUnitConverterDistanceInput.Visible = false;
-            dropUnitConverterDistanceOutput.Visible = false;
+            dropUnitConverterDistanceInput.Location = new Point(885,296);
+            dropUnitConverterDistanceOutput.Location = new Point(885,296);
 
-            dropUnitConverterWeightInput.Visible = false;
-            dropUnitConverterWeightOutput.Visible = false;
+            dropUnitConverterWeightInput.Location = new Point(885,296);
+            dropUnitConverterWeightOutput.Location = new Point(885,296);
 
-            btnUnitConverterDistance.Visible = false;
-            btnUnitConverterWeight.Visible = false;
+            btnUnitConverterDistance.Location = new Point(885,296);
+            btnUnitConverterWeight.Location = new Point(885,296);
         }
-        private void lblUnitConverterName_Load(object sender, EventArgs e)
+
+        #endregion ConverterControl
+
+        private void Form1_Load(object sender, EventArgs e)
         {
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
             dropUnitConverterDistanceInput.SelectedIndex = 0;
             dropUnitConverterDistanceOutput.SelectedIndex = 1;
             dropUnitConverterWeightInput.SelectedIndex = 0;
             dropUnitConverterWeightOutput.SelectedIndex = 1;
         }
-
-        #endregion ConverterControl
-
     }
 }

@@ -27,6 +27,8 @@ namespace FitnessTrackingTools
 
         private void UserManagementForm_Load(object sender, EventArgs e)
         {
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+
             if (user.Name == "null user") return;
             else
             {
