@@ -181,7 +181,7 @@
             this.txtWeeklyMessage.ReadOnly = true;
             this.txtWeeklyMessage.Size = new System.Drawing.Size(263, 143);
             this.txtWeeklyMessage.TabIndex = 9;
-            this.txtWeeklyMessage.Text = "Hello Username,\r\n\r\nIn the last week, you\'ve *Insert random activity and count*";
+            this.txtWeeklyMessage.Text = "Sign in by clicking the User icon above!";
             // 
             // txtChallengeMsg
             // 
@@ -227,7 +227,6 @@
             this.picFitnessImage.Size = new System.Drawing.Size(263, 168);
             this.picFitnessImage.TabIndex = 13;
             this.picFitnessImage.TabStop = false;
-            this.picFitnessImage.Click += new System.EventHandler(this.picFitnessImage_Click);
             // 
             // picTimer
             // 
@@ -902,6 +901,7 @@
             this.Name = "Form1";
             this.Text = "Fitness Tracker";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.VisibleChanged += new System.EventHandler(this.Form1_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.picClientLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFitnessImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picTimer)).EndInit();

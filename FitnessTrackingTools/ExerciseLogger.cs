@@ -26,7 +26,7 @@ namespace FitnessTrackingTools
         {
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             lblLoggerUsernameDisplay.Text = user.Name;
-            txtID.Text = updateID().ToString();
+            txtID.Text = user.updateID().ToString();
         }
 
         private void dropExerciseType_SelectedIndexChanged(object sender, EventArgs e)
@@ -94,35 +94,10 @@ namespace FitnessTrackingTools
             MessageBox.Show("Added Exercise");
 
             clearSelection(null, EventArgs.Empty);
-            txtID.Text = updateID().ToString();
+            txtID.Text = user.updateID().ToString();
 
         }
 
-        private int updateID()
-        {
-            int rowCount = 0;
-            string fileName = $"{user.Name}.csv";
-            string filePath = Path.Combine("C:\\Users\\taful\\source\\repos\\CS-Year-2---Professionalism-Project\\FitnessTrackingTools\\ExerciseLogs", fileName);
-
-            try
-            {
-                using (var reader = new StreamReader(filePath))
-                {
-                    while (!reader.EndOfStream)
-                    {
-                        reader.ReadLine();
-                        rowCount++;
-                    }
-                }
-            }
-            catch(Exception ex)
-            {
-                return 1;
-            }
-
-
-            return rowCount + 1;
-        }
 
         private void clearSelection(object sender, EventArgs e)
         {
@@ -134,6 +109,12 @@ namespace FitnessTrackingTools
             txtReps.Text = "";
             txtWeight.Text = "";
             txtDuration.Text = "";
+        }
+
+        private void ExerciseLogger_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            mainForm.Location = this.Location;
+            mainForm.Visible = true;
         }
     }
 }

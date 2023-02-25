@@ -317,6 +317,7 @@
             this.Controls.Add(this.picClientLogo);
             this.Name = "ExerciseLogger";
             this.Text = "ExerciseLogger";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ExerciseLogger_FormClosing);
             this.Load += new System.EventHandler(this.ExerciseLogger_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picClientLogo)).EndInit();
             this.ResumeLayout(false);

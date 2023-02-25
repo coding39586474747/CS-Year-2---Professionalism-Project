@@ -146,5 +146,11 @@ namespace FitnessTrackingTools
             txtUserWeight.Text = user.Weight.ToString();
             dateTimeDOB.Value = user.DateOfBirth;
         }
+
+        private void UserManagementForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            mainForm.Location = this.Location;
+            mainForm.Visible = true;
+        }
     }
 }

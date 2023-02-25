@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.ApplicationServices;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -89,6 +90,32 @@ namespace FitnessTrackingTools
 
             // If no user was found, return null
             return null;
+        }
+
+        public int updateID()
+        {
+            int rowCount = 0;
+            string fileName = $"{Name}.csv";
+            string filePath = Path.Combine("C:\\Users\\taful\\source\\repos\\CS-Year-2---Professionalism-Project\\FitnessTrackingTools\\ExerciseLogs", fileName);
+
+            try
+            {
+                using (var reader = new StreamReader(filePath))
+                {
+                    while (!reader.EndOfStream)
+                    {
+                        reader.ReadLine();
+                        rowCount++;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                return 1;
+            }
+
+
+            return rowCount + 1;
         }
 
 

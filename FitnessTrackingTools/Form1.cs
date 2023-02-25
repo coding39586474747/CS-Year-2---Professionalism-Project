@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Threading;
+using System.Windows.Forms;
 
 namespace FitnessTrackingTools
 {
@@ -57,10 +58,61 @@ namespace FitnessTrackingTools
             sender = p;
         }
 
-
+        // Generates a Challenge from randomly selected values
         private void btnChallenge_Click(object sender, EventArgs e)
-        {
+        {         
+            if (user.Name == "null user")
+            {
+                MessageBox.Show("You must log in to generate a challenge");
+                return;
+            }
+            string[] cardioArr = { "Running", "Swimming", "Cycling", "Hiking" };
+            string[] strengthArr = { "Bench Press", "Dumbbell Press", "Squats", "Deadlift", "Overhead Press", "Bent Over Rows" };
+            string[] intensityArr = { "Very Low", "Low", "Average" }; // Does not recommend higher intensity
+            int[] repsArr = { 5, 6, 7, 8, 9, 10, 11, 12 };
+            int[] setsArr = { 2, 3, 4, 5 };
+            int[] weightArr = { 10, 20, 30, 40, 50, 60 };   
+            int[] durationArr = { 10, 15, 20, 25, 30 };
 
+            Strength str = new Strength
+                (user.updateID(), randomIndex(strengthArr),
+                randomIndex(intensityArr), user, DateTime.Now,
+                randomIndex(repsArr), randomIndex(setsArr),
+                randomIndex(weightArr));
+
+            Cardio car = new Cardio
+                (user.updateID()+1, randomIndex(cardioArr),
+                randomIndex(intensityArr), user, DateTime.Now,
+                randomIndex(durationArr));
+
+            string message = "Strength:\n" + str.Name + "\nSets: " + str.Sets + "\nReps: " + str.Reps
+                + "\nWeight: " + str.Weight
+                + "\n\nCardio: \n" + car.Name + "\nDuration: " + car.DurationInMinutes + "\n\nCompleted the challenge?";
+
+            DialogResult result = MessageBox.Show(message, "New Challenge", MessageBoxButtons.YesNo);
+
+            if (result == DialogResult.No) return;
+
+            str.AppendToCSV();
+            car.AppendToCSV();
+
+
+        }
+
+        // takes an int array and returns a random index for it
+        private int randomIndex(int[] arr)
+        {
+            Random random = new Random();
+            int index = random.Next(0, arr.Length);
+            return arr[index];
+        }
+
+        // takes a string array and returns a random index for it
+        private string randomIndex(string[] arr)
+        {
+            Random random = new Random();
+            int index = random.Next(0, arr.Length);
+            return arr[index];
         }
 
         private void btnPlus_Click(object sender, EventArgs e)
@@ -90,6 +142,8 @@ namespace FitnessTrackingTools
             {
                 ExerciseLogger ExerciseLoggerForm = new ExerciseLogger(this, user);
                 ExerciseLoggerForm.Show();
+                ExerciseLoggerForm.Location = this.Location;
+                this.Visible = false;
             }
         }
 
@@ -125,6 +179,8 @@ namespace FitnessTrackingTools
             {
                 StatsForm statsForm = new StatsForm(this, user);
                 statsForm.Show();
+                statsForm.Location = this.Location;
+                this.Visible = false;
             }
         }
 
@@ -149,23 +205,17 @@ namespace FitnessTrackingTools
             {
                 UserManagementForm userManagementForm = new UserManagementForm(this, user);
                 userManagementForm.Show();
+                userManagementForm.Location = this.Location;
+                this.Visible = false;
             }        
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)
         {
-            User user = new User("null user", 180, 75, new DateTime(1980, 1, 1), "Default");
-        }
-        private void picFitnessImage_Click(object sender, EventArgs e)
-        {
-            if (user.Name == "null user")
-            {
-                return;
-            }
-            else
-            {
-                txtWeeklyMessage.Text = user.Name;
-            }
+            if (user.Name == "null user") return;
+            MessageBox.Show("Logging out");
+            user = new User("null user", 180, 75, new DateTime(1980, 1, 1), "Default");
+            txtWeeklyMessage.Text = "Sign in by clicking the User icon above!";
         }
 
         public void updateUser(User u)
@@ -788,6 +838,18 @@ namespace FitnessTrackingTools
             dropUnitConverterDistanceOutput.SelectedIndex = 1;
             dropUnitConverterWeightInput.SelectedIndex = 0;
             dropUnitConverterWeightOutput.SelectedIndex = 1;
+        }
+
+        private void Form1_VisibleChanged(object sender, EventArgs e)
+        {
+            if (user.Name == "null user") return;
+
+            else
+            {
+                txtWeeklyMessage.Text = "Hello " + user.Name + "!";
+                txtWeeklyMessage.AppendText(Environment.NewLine);
+                txtWeeklyMessage.AppendText("Did you know that exercise is, like, good for you?");
+            }
         }
     }
 }

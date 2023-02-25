@@ -268,6 +268,7 @@
             this.Controls.Add(this.picClientLogo);
             this.Name = "UserManagementForm";
             this.Text = "UserManagementForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.UserManagementForm_FormClosing);
             this.Load += new System.EventHandler(this.UserManagementForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picClientLogo)).EndInit();
             this.ResumeLayout(false);

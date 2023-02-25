@@ -47,6 +47,14 @@
             this.colDuration = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblGridCardio = new System.Windows.Forms.Label();
             this.lblGridStrength = new System.Windows.Forms.Label();
+            this.txtHeaviestLift = new System.Windows.Forms.TextBox();
+            this.lblHeaviestLift = new System.Windows.Forms.Label();
+            this.lblMostCommonLift = new System.Windows.Forms.Label();
+            this.txtMostCommonLift = new System.Windows.Forms.TextBox();
+            this.lblMostCommonCardio = new System.Windows.Forms.Label();
+            this.txtMostCommonCardio = new System.Windows.Forms.TextBox();
+            this.lblLongestCardio = new System.Windows.Forms.Label();
+            this.txtLongestCardio = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.picClientLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridStrength)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridCardio)).BeginInit();
@@ -224,11 +232,87 @@
             this.lblGridStrength.TabIndex = 56;
             this.lblGridStrength.Text = "Strength";
             // 
+            // txtHeaviestLift
+            // 
+            this.txtHeaviestLift.Location = new System.Drawing.Point(12, 194);
+            this.txtHeaviestLift.Name = "txtHeaviestLift";
+            this.txtHeaviestLift.ReadOnly = true;
+            this.txtHeaviestLift.Size = new System.Drawing.Size(125, 27);
+            this.txtHeaviestLift.TabIndex = 57;
+            // 
+            // lblHeaviestLift
+            // 
+            this.lblHeaviestLift.AutoSize = true;
+            this.lblHeaviestLift.Location = new System.Drawing.Point(12, 171);
+            this.lblHeaviestLift.Name = "lblHeaviestLift";
+            this.lblHeaviestLift.Size = new System.Drawing.Size(91, 20);
+            this.lblHeaviestLift.TabIndex = 58;
+            this.lblHeaviestLift.Text = "Heaviest lift:";
+            // 
+            // lblMostCommonLift
+            // 
+            this.lblMostCommonLift.AutoSize = true;
+            this.lblMostCommonLift.Location = new System.Drawing.Point(12, 118);
+            this.lblMostCommonLift.Name = "lblMostCommonLift";
+            this.lblMostCommonLift.Size = new System.Drawing.Size(135, 20);
+            this.lblMostCommonLift.TabIndex = 60;
+            this.lblMostCommonLift.Text = "Most Common Lift:";
+            // 
+            // txtMostCommonLift
+            // 
+            this.txtMostCommonLift.Location = new System.Drawing.Point(12, 141);
+            this.txtMostCommonLift.Name = "txtMostCommonLift";
+            this.txtMostCommonLift.ReadOnly = true;
+            this.txtMostCommonLift.Size = new System.Drawing.Size(125, 27);
+            this.txtMostCommonLift.TabIndex = 59;
+            // 
+            // lblMostCommonCardio
+            // 
+            this.lblMostCommonCardio.AutoSize = true;
+            this.lblMostCommonCardio.Location = new System.Drawing.Point(220, 118);
+            this.lblMostCommonCardio.Name = "lblMostCommonCardio";
+            this.lblMostCommonCardio.Size = new System.Drawing.Size(158, 20);
+            this.lblMostCommonCardio.TabIndex = 62;
+            this.lblMostCommonCardio.Text = "Most Common Cardio:";
+            // 
+            // txtMostCommonCardio
+            // 
+            this.txtMostCommonCardio.Location = new System.Drawing.Point(220, 141);
+            this.txtMostCommonCardio.Name = "txtMostCommonCardio";
+            this.txtMostCommonCardio.ReadOnly = true;
+            this.txtMostCommonCardio.Size = new System.Drawing.Size(125, 27);
+            this.txtMostCommonCardio.TabIndex = 61;
+            // 
+            // lblLongestCardio
+            // 
+            this.lblLongestCardio.AutoSize = true;
+            this.lblLongestCardio.Location = new System.Drawing.Point(220, 171);
+            this.lblLongestCardio.Name = "lblLongestCardio";
+            this.lblLongestCardio.Size = new System.Drawing.Size(112, 20);
+            this.lblLongestCardio.TabIndex = 64;
+            this.lblLongestCardio.Text = "Longest Cardio:";
+            // 
+            // txtLongestCardio
+            // 
+            this.txtLongestCardio.Location = new System.Drawing.Point(220, 194);
+            this.txtLongestCardio.Name = "txtLongestCardio";
+            this.txtLongestCardio.ReadOnly = true;
+            this.txtLongestCardio.Size = new System.Drawing.Size(125, 27);
+            this.txtLongestCardio.TabIndex = 63;
+            // 
             // StatsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(386, 529);
+            this.Controls.Add(this.lblLongestCardio);
+            this.Controls.Add(this.txtLongestCardio);
+            this.Controls.Add(this.lblMostCommonCardio);
+            this.Controls.Add(this.txtMostCommonCardio);
+            this.Controls.Add(this.lblMostCommonLift);
+            this.Controls.Add(this.txtMostCommonLift);
+            this.Controls.Add(this.lblHeaviestLift);
+            this.Controls.Add(this.txtHeaviestLift);
             this.Controls.Add(this.lblGridStrength);
             this.Controls.Add(this.lblGridCardio);
             this.Controls.Add(this.gridCardio);
@@ -238,6 +322,7 @@
             this.Controls.Add(this.picClientLogo);
             this.Name = "StatsForm";
             this.Text = "StatsForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.StatsForm_FormClosing);
             this.Load += new System.EventHandler(this.StatsForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picClientLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridStrength)).EndInit();
@@ -268,5 +353,13 @@
         private DataGridViewTextBoxColumn colDuration;
         private Label lblGridCardio;
         private Label lblGridStrength;
+        private TextBox txtHeaviestLift;
+        private Label lblHeaviestLift;
+        private Label lblMostCommonLift;
+        private TextBox txtMostCommonLift;
+        private Label lblMostCommonCardio;
+        private TextBox txtMostCommonCardio;
+        private Label lblLongestCardio;
+        private TextBox txtLongestCardio;
     }
 }
