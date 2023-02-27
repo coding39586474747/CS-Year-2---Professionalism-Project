@@ -103,6 +103,22 @@ namespace FitnessTrackingTools
 
             user.WriteUserToCsv(user);
 
+            MessageBox.Show("User created, please sign in now", "User created",
+                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            txtUserHeight.Text = user.Height.ToString();
+            txtUserPassword.Text = user.Name;
+            txtUserWeight.Text = user.Weight.ToString();
+            dateTimeDOB.Value = user.DateOfBirth;
+
+            btnUserCreate.Enabled = false;
+            txtUserHeight.Enabled = false;
+            txtUserName.Enabled = false;
+            txtUserWeight.Enabled = false;
+            dateTimeDOB.Enabled = false;
+            txtUserPassword.Enabled = false;
+            txtUserPasswordConfirm.Enabled = false;
+
         }
 
         private void btnUserLogin_Click(object sender, EventArgs e)

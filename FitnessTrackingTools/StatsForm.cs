@@ -26,14 +26,18 @@ namespace FitnessTrackingTools
         {
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             lblStatsUsernameDisplay.Text = user.Name;
-            updateDataGrids();
-
-            if (gridStrength.RowCount > 0)
+            if (user.updateID() > 1)
             {
-                txtHeaviestLift.Text = getHeaviestLift().ToString() + " Kg";
-                txtMostCommonLift.Text = getCommonLift();
-                txtMostCommonCardio.Text = getCommonCardio();
-                txtLongestCardio.Text = getLongestCardio().ToString() + " mins";
+                updateDataGrids();
+
+                if (gridStrength.RowCount > 0)
+                {
+                    txtHeaviestLift.Text = getHeaviestLift().ToString() + " Kg";
+                    txtMostCommonLift.Text = getCommonLift();
+                    txtMostCommonCardio.Text = getCommonCardio();
+                    txtLongestCardio.Text = getLongestCardio().ToString() + " mins";
+                }
+
             }
 
         }

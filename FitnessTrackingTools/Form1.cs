@@ -8,6 +8,7 @@ namespace FitnessTrackingTools
     public partial class Form1 : Form
     {
         User user = new User("null user", 180, 75, new DateTime(1980, 1, 1), "Default");
+        bool disclaimerAgreed = false;
 
         Thread? timerThread = null;
         public delegate void timerCountdownDelegate();
@@ -20,7 +21,7 @@ namespace FitnessTrackingTools
 
         public Form1()
         {
-            InitializeComponent();
+            InitializeComponent();            
         }
 
         private void tool_Click(object sender, EventArgs e)
@@ -36,6 +37,7 @@ namespace FitnessTrackingTools
                 p.Tag = "open";
                 btnChallenge.Enabled = false;
                 picToolCover.Location = new Point(1,101);
+                picToolCover.Enabled = true;
 
                 if (p.Name == picTimer.Name) timerShow();
                 else if (p.Name == picStopwatch.Name) stopwatchShow();
@@ -48,6 +50,7 @@ namespace FitnessTrackingTools
                 p.Tag = "closed";
                 btnChallenge.Enabled = true;
                 picToolCover.Location = new Point(593,58);
+                picToolCover.Enabled = false;
 
                 if (p.Name == picTimer.Name) timerHide();
                 else if (p.Name == picStopwatch.Name) stopwatchHide();
@@ -152,6 +155,33 @@ namespace FitnessTrackingTools
 
         }
 
+        private void disclaimerFormLoad()
+        {
+
+            bool isFormOpen = false;
+
+            // Check if there's an instance of ExerciseLogger open
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form is DisclaimerForm)
+                {
+                    isFormOpen = true;
+                    form.Focus();
+                    break;
+                }
+
+            }
+
+            if (!isFormOpen)
+            {
+                DisclaimerForm disclaimerForm = new DisclaimerForm(this);
+                disclaimerForm.Show();
+                disclaimerForm.Location = this.Location;
+                this.Visible = false;
+            }
+            
+        }        
+
         private void btnStats_Click(object sender, EventArgs e)
         {
             if (user.Name == "null user")
@@ -184,8 +214,13 @@ namespace FitnessTrackingTools
             }
         }
 
-        private void btnUsers_Click(object sender, EventArgs e)
+        public void btnUsers_Click(object sender, EventArgs e)
         {
+            if (!disclaimerAgreed)
+            {
+                disclaimerFormLoad();
+                return;
+            }
             bool isFormOpen = false;
 
             // Check if there's an instance of UserManagementForm open
@@ -833,11 +868,16 @@ namespace FitnessTrackingTools
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;    
             dropUnitConverterDistanceInput.SelectedIndex = 0;
             dropUnitConverterDistanceOutput.SelectedIndex = 1;
             dropUnitConverterWeightInput.SelectedIndex = 0;
             dropUnitConverterWeightOutput.SelectedIndex = 1;
+        }
+
+        public void setDisclaimerBool()
+        {
+            disclaimerAgreed = true;
         }
 
         private void Form1_VisibleChanged(object sender, EventArgs e)
