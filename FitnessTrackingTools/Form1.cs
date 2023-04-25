@@ -152,7 +152,34 @@ namespace FitnessTrackingTools
 
         private void btnAchievement_Click(object sender, EventArgs e)
         {
+            if (user.Name == "null user")
+            {
+                MessageBox.Show("You must be logged in to see Achievements");
+                return;
+            }
 
+            bool isFormOpen = false;
+
+            // Check if there's an instance of UserManagementForm open
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form is AchievementsForm)
+                {
+                    isFormOpen = true;
+                    form.Focus();
+                    break;
+                }
+
+            }
+
+            // If no instance of UserManagementForm is open, create a new one
+            if (!isFormOpen)
+            {
+                AchievementsForm achievementForm = new AchievementsForm(this, user);
+                achievementForm.Show();
+                achievementForm.Location = this.Location;
+                this.Visible = false;
+            }
         }
 
         private void disclaimerFormLoad()
