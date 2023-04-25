@@ -181,6 +181,7 @@
             // 
             this.txtWeight.Enabled = false;
             this.txtWeight.Location = new System.Drawing.Point(229, 289);
+            this.txtWeight.MaxLength = 4;
             this.txtWeight.Name = "txtWeight";
             this.txtWeight.Size = new System.Drawing.Size(125, 27);
             this.txtWeight.TabIndex = 43;
@@ -214,6 +215,7 @@
             // 
             this.txtDuration.Enabled = false;
             this.txtDuration.Location = new System.Drawing.Point(229, 354);
+            this.txtDuration.MaxLength = 4;
             this.txtDuration.Name = "txtDuration";
             this.txtDuration.Size = new System.Drawing.Size(125, 27);
             this.txtDuration.TabIndex = 47;

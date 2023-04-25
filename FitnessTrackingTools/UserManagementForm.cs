@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace FitnessTrackingTools
 {
@@ -28,6 +29,7 @@ namespace FitnessTrackingTools
         private void UserManagementForm_Load(object sender, EventArgs e)
         {
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
 
             if (user.Name == "null user") return;
             else
@@ -100,6 +102,15 @@ namespace FitnessTrackingTools
             double.Parse(txtUserWeight.Text),
             dateTimeDOB.Value,
             txtUserPassword.Text);
+
+            String _filePath = Path.GetDirectoryName(System.AppDomain.CurrentDomain.BaseDirectory);
+            String fileName = _filePath + "\\Users\\" + user.Name + ".csv";
+
+            if (File.Exists(fileName)) 
+            {
+                MessageBox.Show("User already exists");
+                return;
+            }
 
             user.WriteUserToCsv(user);
 

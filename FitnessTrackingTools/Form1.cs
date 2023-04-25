@@ -897,6 +897,7 @@ namespace FitnessTrackingTools
         private void Form1_Load(object sender, EventArgs e)
         {
             this.FormBorderStyle = FormBorderStyle.FixedSingle;    
+            MaximizeBox = false;
             dropUnitConverterDistanceInput.SelectedIndex = 0;
             dropUnitConverterDistanceOutput.SelectedIndex = 1;
             dropUnitConverterWeightInput.SelectedIndex = 0;

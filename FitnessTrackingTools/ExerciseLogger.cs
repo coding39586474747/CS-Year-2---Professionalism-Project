@@ -70,8 +70,37 @@ namespace FitnessTrackingTools
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+
+
+            if (dropExerciseName.SelectedIndex == -1 ||
+                dropExerciseType.SelectedIndex == -1 ||
+                txtID.Text == "" ||
+                dropIntensity.SelectedIndex == -1 ||
+                user == null || 
+                dateTimeExercise == null)
+            {
+                MessageBox.Show("All available fields must be completed.");
+                return;
+            }
+
             if (dropExerciseType.SelectedItem.ToString() == "Strength")
             {
+                if (int.Parse(txtReps.Text) > 1000 || int.Parse(txtReps.Text) < 1 ||
+                    int.Parse(txtSets.Text) > 1000 || int.Parse(txtSets.Text) < 1 ||
+                    int.Parse(txtWeight.Text) > 1000 || int.Parse(txtWeight.Text) < 1)
+                {
+                    MessageBox.Show("Input between 0 and 1000");
+                    return;
+                }
+
+                if (txtWeight.Text == "" ||
+                txtReps.Text == "" ||
+                txtSets.Text == "" )
+                {
+                    MessageBox.Show("All available fields must be completed.");
+                    return;
+                }
+
                 Strength str = new Strength
                     (int.Parse(txtID.Text), dropExerciseName.SelectedItem.ToString(), 
                     dropIntensity.SelectedItem.ToString(), user, dateTimeExercise.Value, 
@@ -83,6 +112,17 @@ namespace FitnessTrackingTools
 
             else if (dropExerciseType.SelectedItem.ToString() == "Cardio")
             {
+                if (int.Parse(txtDuration.Text) > 1000 || int.Parse(txtDuration.Text) < 1)
+                {
+                    MessageBox.Show("Input between 0 and 1000");
+                    return;
+                }
+                if (txtDuration.Text == "")
+                {
+                    MessageBox.Show("All available fields must be completed.");
+                    return;
+                }
+
                 Cardio card = new Cardio
                     (int.Parse(txtID.Text), dropExerciseName.SelectedItem.ToString(),
                     dropIntensity.SelectedItem.ToString(), user, dateTimeExercise.Value,

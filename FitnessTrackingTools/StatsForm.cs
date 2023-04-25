@@ -26,6 +26,7 @@ namespace FitnessTrackingTools
         private void StatsForm_Load(object sender, EventArgs e)
         {
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
             lblStatsUsernameDisplay.Text = user.Name;
             if (user.updateID() > 1)
             {

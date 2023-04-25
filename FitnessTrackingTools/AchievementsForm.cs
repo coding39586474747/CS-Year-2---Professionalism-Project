@@ -62,6 +62,12 @@ namespace FitnessTrackingTools
             String _filePath = Path.GetDirectoryName(System.AppDomain.CurrentDomain.BaseDirectory);
             String fileName = _filePath + "\\ExerciseLogs\\" + username + ".csv";
 
+            if (!File.Exists(fileName))
+            {
+                MessageBox.Show("You must add exercises before trying to view achievements");
+                return;
+            }
+
             // Read all lines from the CSV file.
             string[] lines = File.ReadAllLines(fileName);
 
