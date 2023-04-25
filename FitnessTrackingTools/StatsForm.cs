@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace FitnessTrackingTools
 {
@@ -152,11 +153,12 @@ namespace FitnessTrackingTools
 
         private void updateDataGrids()
         {
-            string fileName = $"{user.Name}.csv";
-            string filePath = Path.Combine("C:\\Users\\taful\\source\\repos\\CS-Year-2---Professionalism-Project\\FitnessTrackingTools\\ExerciseLogs", fileName);
+            string username = $"{user.Name}";
+            String _filePath = Path.GetDirectoryName(System.AppDomain.CurrentDomain.BaseDirectory);
+            String fileName = _filePath + "\\ExerciseLogs\\" + username + ".csv";
 
             // Read all lines from the CSV file.
-            string[] lines = File.ReadAllLines(filePath);
+            string[] lines = File.ReadAllLines(fileName);
 
             // Split each line into an array of string values, starting from index 1.
             string[][] data = new string[lines.Length][];

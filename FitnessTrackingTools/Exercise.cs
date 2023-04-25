@@ -54,13 +54,15 @@ namespace FitnessTrackingTools
 
         public override void AppendToCSV()
         {
-            string fileName = $"{User.Name}.csv";
-            string filePath = Path.Combine("C:\\Users\\taful\\source\\repos\\CS-Year-2---Professionalism-Project\\FitnessTrackingTools\\ExerciseLogs", fileName);
 
-            bool fileExists = File.Exists(filePath);
+            string username = $"{User.Name}";
+            String _filePath = Path.GetDirectoryName(System.AppDomain.CurrentDomain.BaseDirectory);
+            String fileName = _filePath + "\\ExerciseLogs\\" + username + ".csv";
+
+            bool fileExists = File.Exists(fileName);
 
             // Create a new file if it doesn't exist, or overwrite the existing file
-            using (StreamWriter sw = new StreamWriter(filePath, true))
+            using (StreamWriter sw = new StreamWriter(fileName, true))
             {
                 // Write the exercise data to the CSV file
                 sw.WriteLine(string.Format("{0},{1},{2},{3},{4},{5},{6},{7}",
@@ -88,13 +90,15 @@ namespace FitnessTrackingTools
 
         public override void AppendToCSV()
         {
-            string fileName = $"{User.Name}.csv";
-            string filePath = Path.Combine("C:\\Users\\taful\\source\\repos\\CS-Year-2---Professionalism-Project\\FitnessTrackingTools\\ExerciseLogs", fileName);
 
-            bool fileExists = File.Exists(filePath);
+            string username = $"{User.Name}";
+            String _filePath = Path.GetDirectoryName(System.AppDomain.CurrentDomain.BaseDirectory);
+            String fileName = _filePath + "\\ExerciseLogs\\" + username + ".csv";
+
+            bool fileExists = File.Exists(fileName);
 
             // Create a new file if it doesn't exist, or overwrite the existing file
-            using (StreamWriter sw = new StreamWriter(filePath, true))
+            using (StreamWriter sw = new StreamWriter(fileName, true))
             {
                 // Write the exercise data to the CSV file
                 sw.WriteLine(string.Format("{0},{1},{2},{3},{4},{5}",

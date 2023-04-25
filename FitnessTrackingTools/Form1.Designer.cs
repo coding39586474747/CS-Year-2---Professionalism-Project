@@ -900,6 +900,7 @@
             this.Controls.Add(this.btnAchievement);
             this.Name = "Form1";
             this.Text = "Fitness Tracker";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.VisibleChanged += new System.EventHandler(this.Form1_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.picClientLogo)).EndInit();

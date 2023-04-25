@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace FitnessTrackingTools
 {
@@ -47,11 +48,13 @@ namespace FitnessTrackingTools
         public void WriteUserToCsv(User user)
         {
             // Construct the file path using the user's name
-            string fileName = $"{user.Name}.csv";
-            string filePath = Path.Combine("C:\\Users\\taful\\source\\repos\\CS-Year-2---Professionalism-Project\\FitnessTrackingTools\\Users", fileName);
+            string username = $"{user.Name}";
+
+            String _filePath = Path.GetDirectoryName(System.AppDomain.CurrentDomain.BaseDirectory);
+            String fileName = _filePath + "\\Users\\" + username + ".csv";
 
             // Create a new file if it doesn't exist, or overwrite the existing file
-            using (StreamWriter sw = new StreamWriter(filePath, false))
+            using (StreamWriter sw = new StreamWriter(fileName, false))
             {
                 // Write the user's data to the CSV file
                 sw.WriteLine(string.Format("{0},{1},{2},{3},{4}",
@@ -65,7 +68,8 @@ namespace FitnessTrackingTools
 
         public User ReadUserFromCsv(string username, string password)
         {
-            String fileName = "C:\\Users\\taful\\source\\repos\\CS-Year-2---Professionalism-Project\\FitnessTrackingTools\\Users\\" + username + ".csv";
+            String _filePath = Path.GetDirectoryName(System.AppDomain.CurrentDomain.BaseDirectory);
+            String fileName = _filePath + "\\Users\\" + username + ".csv";
             
             // Create a StreamReader object to read from the CSV file
             using (StreamReader reader = new StreamReader(fileName))
@@ -95,12 +99,13 @@ namespace FitnessTrackingTools
         public int updateID()
         {
             int rowCount = 0;
-            string fileName = $"{Name}.csv";
-            string filePath = Path.Combine("C:\\Users\\taful\\source\\repos\\CS-Year-2---Professionalism-Project\\FitnessTrackingTools\\ExerciseLogs", fileName);
+            string username = $"{Name}";
 
+            String _filePath = Path.GetDirectoryName(System.AppDomain.CurrentDomain.BaseDirectory);
+            String fileName = _filePath + "\\ExerciseLogs\\" + username + ".csv";
             try
             {
-                using (var reader = new StreamReader(filePath))
+                using (var reader = new StreamReader(fileName))
                 {
                     while (!reader.EndOfStream)
                     {

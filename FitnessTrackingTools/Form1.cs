@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.DirectoryServices;
 using System.Threading;
 using System.Windows.Forms;
 
@@ -917,6 +918,14 @@ namespace FitnessTrackingTools
                 txtWeeklyMessage.AppendText(Environment.NewLine);
                 txtWeeklyMessage.AppendText("Did you know that exercise is, like, good for you?");
             }
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            user = new User("null user", 180, 75, new DateTime(1980, 1, 1), "Default");
+            timerThread = null;
+            stopwatchThread = null;
+            intervalThread = null;
         }
     }
 }
