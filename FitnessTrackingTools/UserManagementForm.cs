@@ -134,14 +134,16 @@ namespace FitnessTrackingTools
 
         private void btnUserLogin_Click(object sender, EventArgs e)
         {
+            Encryption encryption = new Encryption("mySecretKey123456789012345678901", "myIV456789012345");
             string username = txtUserLoginUsername.Text;
             string password = txtUserLoginPassword.Text;
+
 
             User temp = new User("null user", 180, 75, new DateTime(1980, 1, 1), "Default");
 
             try
             {
-                temp = temp.ReadUserFromCsv(username, password);
+                temp = temp.ReadUserFromCsv(encryption.Encrypt(username), encryption.Encrypt(password));
             }
             catch (FileNotFoundException ex)
             {

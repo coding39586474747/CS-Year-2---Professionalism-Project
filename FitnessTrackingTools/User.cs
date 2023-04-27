@@ -47,6 +47,9 @@ namespace FitnessTrackingTools
 
         public void WriteUserToCsv(User user)
         {
+            
+            Encryption encryption = new Encryption("mySecretKey123456789012345678901", "myIV456789012345");
+
             // Construct the file path using the user's name
             string username = $"{user.Name}";
 
@@ -58,18 +61,19 @@ namespace FitnessTrackingTools
             {
                 // Write the user's data to the CSV file
                 sw.WriteLine(string.Format("{0},{1},{2},{3},{4}",
-                    user.Name,
-                    user.Height,
-                    user.Weight,
-                    user.DateOfBirth.ToString("dd-MM-yyyy"),
-                    user.GetPassword()));
+                    encryption.Encrypt(user.Name),
+                    encryption.Encrypt(user.Height.ToString()),
+                    encryption.Encrypt(user.Weight.ToString()),
+                    encryption.Encrypt(user.DateOfBirth.ToString("dd-MM-yyyy")),
+                    encryption.Encrypt(user.GetPassword())));
             }
         }
 
         public User ReadUserFromCsv(string username, string password)
         {
+            Encryption encryption = new Encryption("mySecretKey123456789012345678901", "myIV456789012345");
             String _filePath = Path.GetDirectoryName(System.AppDomain.CurrentDomain.BaseDirectory);
-            String fileName = _filePath + "\\Users\\" + username + ".csv";
+            String fileName = _filePath + "\\Users\\" + encryption.Decrypt(username) + ".csv";
             
             // Create a StreamReader object to read from the CSV file
             using (StreamReader reader = new StreamReader(fileName))
@@ -86,7 +90,13 @@ namespace FitnessTrackingTools
                     if (fields[0] == username && fields[4] == password)
                     {
                         // Create a new User object using the data from the CSV file
-                        User user = new User(fields[0], double.Parse(fields[1]), double.Parse(fields[2]), DateTime.Parse(fields[3]), fields[4]);
+                        User user = new User(
+                            encryption.Decrypt(fields[0]), 
+                            double.Parse(encryption.Decrypt(fields[1])), 
+                            double.Parse(encryption.Decrypt(fields[2])), 
+                            DateTime.Parse(encryption.Decrypt(fields[3])), 
+                            encryption.Decrypt(fields[4]));
+
                         return user;
                     }
                 }

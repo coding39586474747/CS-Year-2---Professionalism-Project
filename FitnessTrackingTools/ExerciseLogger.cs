@@ -14,6 +14,7 @@ namespace FitnessTrackingTools
     {
         User user = new User("null user", 180, 75, new DateTime(1980, 1, 1), "Default");
         Form1 mainForm = new Form1();
+        
 
         public ExerciseLogger(Form1 original, User u)
         {
@@ -70,8 +71,6 @@ namespace FitnessTrackingTools
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-
-
             if (dropExerciseName.SelectedIndex == -1 ||
                 dropExerciseType.SelectedIndex == -1 ||
                 txtID.Text == "" ||
