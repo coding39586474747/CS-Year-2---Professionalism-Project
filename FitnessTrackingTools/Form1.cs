@@ -8,15 +8,21 @@ namespace FitnessTrackingTools
 {
     public partial class Form1 : Form
     {
+        // default user
         User user = new User("null user", 180, 75, new DateTime(1980, 1, 1), "Default");
+
+        // used to ensure the disclaimer appears only once
         bool disclaimerAgreed = false;
 
+        // new thread for the timer to run on
         Thread? timerThread = null;
         public delegate void timerCountdownDelegate();
 
+        // new thread for the stopwatch to run on
         Thread? stopwatchThread = null;
         public delegate void stopwatchDelegate();
 
+        // new thread for the interval timer to run on
         Thread? intervalThread = null;
         public delegate void intervalDelegate();
 
@@ -25,6 +31,7 @@ namespace FitnessTrackingTools
             InitializeComponent();            
         }
 
+        // generic function for all 4 tools to call
         private void tool_Click(object sender, EventArgs e)
         {
             int x = 0;
@@ -34,12 +41,16 @@ namespace FitnessTrackingTools
 
             if (p.Tag.ToString() == "closed")
             {
+                // absolute pixel locations, should be improved with
+                // relative locations to prevent different
+                // displays being faulty
                 p.Location = new Point(x + 290, y);
                 p.Tag = "open";
                 btnChallenge.Enabled = false;
                 picToolCover.Location = new Point(1,101);
                 picToolCover.Enabled = true;
 
+                // if block responsible for displaying tools
                 if (p.Name == picTimer.Name) timerShow();
                 else if (p.Name == picStopwatch.Name) stopwatchShow();
                 else if (p.Name == picIntervalTimer.Name) intervalShow();
@@ -53,6 +64,7 @@ namespace FitnessTrackingTools
                 picToolCover.Location = new Point(593,58);
                 picToolCover.Enabled = false;
 
+                // if block responsible for hiding tools
                 if (p.Name == picTimer.Name) timerHide();
                 else if (p.Name == picStopwatch.Name) stopwatchHide();
                 else if (p.Name == picIntervalTimer.Name) intervalHide();
@@ -70,6 +82,7 @@ namespace FitnessTrackingTools
                 MessageBox.Show("You must log in to generate a challenge");
                 return;
             }
+            // arrays to allow random index selection
             string[] cardioArr = { "Running", "Swimming", "Cycling", "Hiking" };
             string[] strengthArr = { "Bench Press", "Dumbbell Press", "Squats", "Deadlift", "Overhead Press", "Bent Over Rows" };
             string[] intensityArr = { "Very Low", "Low", "Average" }; // Does not recommend higher intensity
@@ -153,6 +166,7 @@ namespace FitnessTrackingTools
 
         private void btnAchievement_Click(object sender, EventArgs e)
         {
+            // checks user is logged in
             if (user.Name == "null user")
             {
                 MessageBox.Show("You must be logged in to see Achievements");
