@@ -148,12 +148,14 @@ namespace FitnessTrackingTools
             catch (FileNotFoundException ex)
             {
                 // Handle the exception by displaying an error message
+                temp = new User("null user", 180, 75, new DateTime(1980, 1, 1), "Default");
                 MessageBox.Show("Username incorrect", "File Not Found Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
 
             
             
-            if (temp != null)
+            if (temp != null && temp.Name != "null user")
             {
                 user = temp;
                 mainForm.updateUser(user);                
